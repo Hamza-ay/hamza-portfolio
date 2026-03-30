@@ -1,0 +1,62 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#0a0a0f"/>
+
+  <!-- Grid -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(99,102,241,0.07)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="fade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fadeMask">
+      <rect width="1920" height="1080" fill="url(#fade)"/>
+    </mask>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grid)" mask="url(#fadeMask)"/>
+
+  <!-- Binary code streams -->
+  <text font-family="monospace" font-size="11" fill="rgba(99,102,241,0.06)" letter-spacing="2">
+    <tspan x="50" y="60">01001000 01100001 01101101 01111010 01100001</tspan>
+    <tspan x="900" y="90">10110100 11001010 01010011 01110100 01100001</tspan>
+    <tspan x="200" y="180">const dev = new FullStack({ react, node, typescript });</tspan>
+    <tspan x="1200" y="210">async function deploy() { await build(); push(); }</tspan>
+    <tspan x="100" y="320">interface Portfolio { skills: Tech[]; projects: Project[] }</tspan>
+    <tspan x="800" y="350">01100110 01110101 01101100 01101100 01110011</tspan>
+    <tspan x="300" y="450">export default function App() { return &lt;Hero /&gt; }</tspan>
+    <tspan x="1100" y="480">SELECT * FROM skills WHERE level = 'expert';</tspan>
+    <tspan x="50" y="580">import { motion } from 'framer-motion';</tspan>
+    <tspan x="700" y="610">01110100 01100101 01100011 01101000</tspan>
+    <tspan x="400" y="720">docker compose up -d --build production</tspan>
+    <tspan x="1000" y="750">git push origin main &amp;&amp; deploy --prod</tspan>
+    <tspan x="150" y="850">const AI = await openai.generate({ model: 'gpt-4o' });</tspan>
+    <tspan x="850" y="880">10101010 01010101 11110000 00001111</tspan>
+    <tspan x="50" y="980">npm run build &amp;&amp; npx next export</tspan>
+    <tspan x="600" y="1010">return { success: true, data: portfolio };</tspan>
+    <tspan x="1300" y="1040">01001000 01100001 01101101 01111010 01100001</tspan>
+  </text>
+
+  <!-- Floating brackets and symbols -->
+  <text font-family="monospace" font-size="40" fill="rgba(99,102,241,0.04)">
+    <tspan x="100" y="150">{ }</tspan>
+    <tspan x="1600" y="200">[ ]</tspan>
+    <tspan x="1400" y="500">&lt;/&gt;</tspan>
+    <tspan x="200" y="600">( )</tspan>
+    <tspan x="1700" y="700">{ }</tspan>
+    <tspan x="300" y="900">=&gt;</tspan>
+    <tspan x="1500" y="950">++</tspan>
+  </text>
+
+  <!-- Circuit-like lines -->
+  <path d="M0 540 L200 540 L220 520 L400 520 L420 540 L600 540" stroke="rgba(99,102,241,0.05)" stroke-width="1" fill="none"/>
+  <path d="M1920 300 L1700 300 L1680 320 L1500 320 L1480 300 L1300 300" stroke="rgba(139,92,246,0.05)" stroke-width="1" fill="none"/>
+  <path d="M0 800 L300 800 L320 780 L500 780" stroke="rgba(99,102,241,0.04)" stroke-width="1" fill="none"/>
+  <path d="M1920 700 L1600 700 L1580 720 L1400 720" stroke="rgba(139,92,246,0.04)" stroke-width="1" fill="none"/>
+
+  <!-- Node dots on circuit lines -->
+  <circle cx="200" cy="540" r="3" fill="rgba(99,102,241,0.1)"/>
+  <circle cx="420" cy="540" r="3" fill="rgba(99,102,241,0.1)"/>
+  <circle cx="1700" cy="300" r="3" fill="rgba(139,92,246,0.1)"/>
+  <circle cx="1480" cy="300" r="3" fill="rgba(139,92,246,0.1)"/>
+</svg>
