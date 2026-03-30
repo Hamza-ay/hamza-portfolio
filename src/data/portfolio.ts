@@ -6,7 +6,7 @@ export const personalInfo = {
   phone: "07 48 41 41 22",
   location: "Lille, France",
   github: "https://github.com/Hamza-ay",
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/hamza-ait-yahiatene-7a795328a",
   bio: "Developpeur Full-Stack avec une experience concrete en React, Next.js, Node.js et TypeScript. Competent en architecture MCP, integration d'APIs REST, automatisation de workflows et developpement IA-assiste. Formation solide en traitement du signal et mathematiques appliquees.",
   availability: "Disponible immediatement",
   typingWords: [
