@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TiltCard from "@/components/ui/TiltCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -53,12 +52,12 @@ export default function Projects() {
               <TiltCard>
                 <div className="p-6 bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl hover:border-indigo-500/30 transition-all duration-300 h-full group">
                   {/* Project image */}
-                  <div className="w-full h-44 rounded-xl overflow-hidden border border-white/[0.06] mb-5 relative">
-                    <Image
+                  <div className="w-full h-44 rounded-xl overflow-hidden border border-white/[0.06] mb-5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
@@ -119,12 +118,12 @@ export default function Projects() {
             <ScrollReveal key={project.title} variant="fadeUp" delay={i * 0.1}>
               <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-indigo-500/20 hover:bg-white/[0.04] transition-all duration-300 group h-full">
                 {/* Small project image */}
-                <div className="w-full h-32 rounded-lg overflow-hidden border border-white/[0.06] mb-4 relative">
-                  <Image
+                <div className="w-full h-32 rounded-lg overflow-hidden border border-white/[0.06] mb-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={project.image}
                     alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="flex items-center gap-3 mb-2">

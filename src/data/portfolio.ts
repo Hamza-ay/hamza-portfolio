@@ -115,13 +115,15 @@ export const education = [
   },
 ];
 
+const basePath = process.env.NODE_ENV === "production" ? "/hamza-portfolio" : "";
+
 export const projects = [
   {
     title: "ImmoGen — Virtual Staging IA",
     description:
       "Plateforme SaaS de home staging virtuel par IA. Pipeline GPT-4o Vision pour analyse architecturale + GPT Image pour generation. Systeme de credits, Stripe/PayPal, portail client et admin.",
     tags: ["Next.js", "FastAPI", "Python", "OpenAI", "PostgreSQL", "Redis", "Stripe"],
-    image: "/projects/immogen.svg",
+    image: `${basePath}/projects/immogen.svg`,
     github: "#",
     live: "https://immogen.fr",
     featured: true,
@@ -131,7 +133,7 @@ export const projects = [
     description:
       "Application full-stack de gestion pour conciergerie Airbnb : interventions, equipes, stocks, facturation, planning temps reel. Architecture microservices avec 14+ services NestJS.",
     tags: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker"],
-    image: "/projects/properis.svg",
+    image: `${basePath}/projects/properis.svg`,
     github: "#",
     live: "#",
     featured: true,
@@ -141,7 +143,7 @@ export const projects = [
     description:
       "Plugin WordPress tout-en-un pour le coaching SEO : missions, gamification, integration Google Site Kit, portail client, auto-updater.",
     tags: ["PHP", "WordPress", "SEO", "JavaScript", "Composer"],
-    image: "/projects/nexyweb.svg",
+    image: `${basePath}/projects/nexyweb.svg`,
     github: "#",
     live: null,
     featured: true,
@@ -151,7 +153,7 @@ export const projects = [
     description:
       "Reseau de neurones profond entraine sur le dataset MNIST pour la reconnaissance de chiffres manuscrits. Precision > 98%.",
     tags: ["Python", "TensorFlow", "Keras", "Deep Learning"],
-    image: "/projects/mnist.svg",
+    image: `${basePath}/projects/mnist.svg`,
     github: "#",
     live: null,
     featured: false,
@@ -161,7 +163,7 @@ export const projects = [
     description:
       "Modele VGG16 pre-entraine sur CIFAR-10 avec fine-tuning pour la classification d'images multi-classes.",
     tags: ["Python", "TensorFlow", "VGG16", "Transfer Learning"],
-    image: "/projects/transfer.svg",
+    image: `${basePath}/projects/transfer.svg`,
     github: "#",
     live: null,
     featured: false,
@@ -171,7 +173,7 @@ export const projects = [
     description:
       "Bot WhatsApp pour la communication automatisee avec les clients : notifications d'interventions, rappels, suivi en temps reel.",
     tags: ["Node.js", "TypeScript", "WhatsApp API", "MCP"],
-    image: "/projects/whatsapp.svg",
+    image: `${basePath}/projects/whatsapp.svg`,
     github: "#",
     live: null,
     featured: false,
