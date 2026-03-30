@@ -13,20 +13,28 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    let lastY = 0;
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 50);
+      setHidden(y > 100 && y > lastY);
+      if (y > lastY && mobileOpen) setMobileOpen(false);
+      lastY = y;
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [mobileOpen]);
 
   return (
     <>
       <motion.nav
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        animate={{ y: hidden ? -100 : 0 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className={`fixed top-4 z-50 px-6 py-3 rounded-full transition-all duration-500 left-1/2 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 max-md:left-4 max-md:translate-x-0 ${
           scrolled
             ? "bg-zinc-900/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black/30"
