@@ -1,0 +1,24 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#0a0a1a"/>
+  <defs>
+    <linearGradient id="tl1" x1="0" y1="200" x2="800" y2="200">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#tl1)" opacity="0.2"/>
+  <!-- VGG blocks -->
+  <rect x="120" y="120" width="60" height="160" rx="8" fill="#059669" opacity="0.25" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="200" y="100" width="60" height="200" rx="8" fill="#059669" opacity="0.3" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="280" y="80" width="60" height="240" rx="8" fill="#047857" opacity="0.35" stroke="#34d399" stroke-width="1.5"/>
+  <rect x="360" y="100" width="60" height="200" rx="8" fill="#065f46" opacity="0.3" stroke="#6ee7b7" stroke-width="1.5"/>
+  <!-- Arrow -->
+  <path d="M440 200 L500 200 M490 190 L500 200 L490 210" stroke="#a78bfa" stroke-width="2.5" opacity="0.6"/>
+  <!-- Fine-tuned layers -->
+  <rect x="520" y="120" width="60" height="160" rx="8" fill="#7c3aed" opacity="0.3" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="600" y="150" width="60" height="100" rx="8" fill="#6d28d9" opacity="0.35" stroke="#c084fc" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="240" y="360" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="12" opacity="0.6">VGG16 Pre-trained</text>
+  <text x="560" y="360" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="12" opacity="0.6">Fine-tuned</text>
+  <text x="400" y="385" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="14" opacity="0.6">Transfer Learning — CIFAR-10</text>
+</svg>
