@@ -8,11 +8,11 @@ import { FiMapPin, FiCalendar } from "react-icons/fi";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 relative">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <SectionHeading title="A propos" subtitle="Mon parcours et ce qui me motive" />
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {/* Left: Bio */}
           <ScrollReveal variant="slideLeft" delay={0.1}>
             <GlassCard className="p-8 h-full">

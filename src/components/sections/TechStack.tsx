@@ -48,7 +48,7 @@ const categories = [
 
 export default function TechStack() {
   return (
-    <section id="skills" className="py-24 px-6 relative">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-purple-600/8 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-6xl mx-auto">

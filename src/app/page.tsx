@@ -9,12 +9,14 @@ import Footer from "@/components/sections/Footer";
 import Background from "@/components/ui/Background";
 import MatrixRain from "@/components/ui/MatrixRain";
 import SectionDivider from "@/components/ui/SectionDivider";
+import ScrollArrow from "@/components/ui/ScrollArrow";
 
 export default function Home() {
   return (
     <main className="relative z-10">
       <Background />
       <MatrixRain />
+      <ScrollArrow />
 
       <Navbar />
       <Hero />

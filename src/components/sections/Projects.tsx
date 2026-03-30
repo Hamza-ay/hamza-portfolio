@@ -29,7 +29,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="projects" className="py-24 px-6 relative">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="max-w-7xl mx-auto">
         <SectionHeading title="Projets" subtitle="Ce que j'ai construit" />
 

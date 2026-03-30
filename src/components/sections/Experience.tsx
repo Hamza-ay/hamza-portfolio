@@ -18,7 +18,7 @@ export default function Experience() {
   });
 
   return (
-    <section id="experience" className="py-24 px-6 relative">
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-indigo-600/8 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-4xl mx-auto">
@@ -64,7 +64,7 @@ function TimelineEntry({
       initial={{ opacity: 0, x: 60 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-      className="relative flex items-start pl-20 md:pl-24"
+      className="relative flex items-start pl-14 sm:pl-20 md:pl-24"
     >
       {/* Dot */}
       <motion.div
