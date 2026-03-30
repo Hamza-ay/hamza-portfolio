@@ -117,13 +117,33 @@ export const education = [
 
 export const projects = [
   {
+    title: "ImmoGen — Virtual Staging IA",
+    description:
+      "Plateforme SaaS de home staging virtuel par IA. Pipeline GPT-4o Vision pour analyse architecturale + GPT Image pour generation. Systeme de credits, Stripe/PayPal, portail client et admin.",
+    tags: ["Next.js", "FastAPI", "Python", "OpenAI", "PostgreSQL", "Redis", "Stripe"],
+    image: "/projects/immogen.svg",
+    github: "#",
+    live: "https://immogen.fr",
+    featured: true,
+  },
+  {
     title: "Properis — Plateforme de Gestion",
     description:
       "Application full-stack de gestion pour conciergerie Airbnb : interventions, equipes, stocks, facturation, planning temps reel. Architecture microservices avec 14+ services NestJS.",
     tags: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker"],
-    image: "/projects/properis.png",
+    image: "/projects/properis.svg",
     github: "#",
     live: "#",
+    featured: true,
+  },
+  {
+    title: "NexYweb Coach — Plugin WordPress",
+    description:
+      "Plugin WordPress tout-en-un pour le coaching SEO : missions, gamification, integration Google Site Kit, portail client, auto-updater.",
+    tags: ["PHP", "WordPress", "SEO", "JavaScript", "Composer"],
+    image: "/projects/nexyweb.svg",
+    github: "#",
+    live: null,
     featured: true,
   },
   {
@@ -131,17 +151,17 @@ export const projects = [
     description:
       "Reseau de neurones profond entraine sur le dataset MNIST pour la reconnaissance de chiffres manuscrits. Precision > 98%.",
     tags: ["Python", "TensorFlow", "Keras", "Deep Learning"],
-    image: "/projects/mnist.png",
+    image: "/projects/mnist.svg",
     github: "#",
     live: null,
-    featured: true,
+    featured: false,
   },
   {
     title: "Classification d'Images — Transfer Learning",
     description:
       "Modele VGG16 pre-entraine sur CIFAR-10 avec fine-tuning pour la classification d'images multi-classes.",
     tags: ["Python", "TensorFlow", "VGG16", "Transfer Learning"],
-    image: "/projects/transfer.png",
+    image: "/projects/transfer.svg",
     github: "#",
     live: null,
     featured: false,
@@ -151,7 +171,7 @@ export const projects = [
     description:
       "Bot WhatsApp pour la communication automatisee avec les clients : notifications d'interventions, rappels, suivi en temps reel.",
     tags: ["Node.js", "TypeScript", "WhatsApp API", "MCP"],
-    image: "/projects/whatsapp.png",
+    image: "/projects/whatsapp.svg",
     github: "#",
     live: null,
     featured: false,

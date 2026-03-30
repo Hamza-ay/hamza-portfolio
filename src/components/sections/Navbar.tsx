@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@heroui/react";
 
 const navLinks = [
   { label: "A propos", href: "#about" },
@@ -28,14 +27,14 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-full transition-all duration-300 ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-full transition-all duration-500 ${
           scrolled
-            ? "bg-zinc-900/80 backdrop-blur-lg border border-white/10 shadow-lg shadow-black/20"
-            : "bg-transparent"
+            ? "bg-zinc-900/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black/30"
+            : "bg-zinc-900/30 backdrop-blur-sm"
         }`}
       >
         <div className="flex items-center gap-8">
-          <a href="#" className="font-bold text-lg text-white tracking-tight">
+          <a href="#" className="font-bold text-xl text-white tracking-tight">
             H<span className="text-indigo-400">.</span>
           </a>
 
@@ -44,21 +43,20 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-zinc-400 hover:text-white transition-colors duration-200"
+                className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
 
-          <Button
-            as="a"
+          <a
             href="#contact"
-            size="sm"
-            className="hidden md:flex bg-indigo-600 text-white hover:bg-indigo-500 rounded-full px-5"
+            className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-600/20"
           >
             Me contacter
-          </Button>
+          </a>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -95,14 +93,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button
-                as="a"
+              <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="bg-indigo-600 text-white rounded-full mt-2"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 transition-colors mt-2"
               >
                 Me contacter
-              </Button>
+              </a>
             </div>
           </motion.div>
         )}
