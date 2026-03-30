@@ -6,18 +6,15 @@ import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import Background from "@/components/ui/Background";
 import MatrixRain from "@/components/ui/MatrixRain";
-import GradientBlobs from "@/components/ui/GradientBlobs";
-import FloatingShapes from "@/components/ui/FloatingShapes";
 import SectionDivider from "@/components/ui/SectionDivider";
 
 export default function Home() {
   return (
     <main className="relative">
-      {/* Animated backgrounds */}
-      <GradientBlobs />
+      <Background />
       <MatrixRain />
-      <FloatingShapes />
 
       <Navbar />
       <Hero />
