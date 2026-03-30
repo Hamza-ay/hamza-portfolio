@@ -40,7 +40,7 @@ export default function About() {
                       key={lang.name}
                       className="px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-sm text-zinc-300"
                     >
-                      {lang.flag} {lang.name} — {lang.level}
+                      {lang.name} — {lang.level}
                     </span>
                   ))}
                 </div>

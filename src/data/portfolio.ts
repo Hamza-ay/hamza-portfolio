@@ -181,9 +181,9 @@ export const projects = [
 ];
 
 export const languages = [
-  { name: "Francais", level: "C1 (courant)", flag: "🇫🇷" },
-  { name: "Anglais", level: "B2 (professionnel)", flag: "🇬🇧" },
-  { name: "Kabyle", level: "Langue maternelle", flag: "🏔️" },
+  { name: "Francais", level: "C1 (courant)" },
+  { name: "Anglais", level: "B2 (professionnel)" },
+  { name: "Kabyle", level: "Langue maternelle" },
 ];
 
 export const interests = [

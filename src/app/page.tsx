@@ -13,9 +13,10 @@ import ScrollArrow from "@/components/ui/ScrollArrow";
 
 export default function Home() {
   return (
-    <main className="relative z-10">
+    <>
       <Background />
       <MatrixRain />
+      <main className="relative" style={{ zIndex: 10 }}>
       <ScrollArrow />
 
       <Navbar />
@@ -31,6 +32,7 @@ export default function Home() {
       <SectionDivider color="indigo" />
       <Contact />
       <Footer />
-    </main>
+      </main>
+    </>
   );
 }

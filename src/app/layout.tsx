@@ -14,6 +14,12 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Hamza AIT YAHIATENE | Developpeur Full-Stack",
   description:
@@ -41,9 +47,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="dark" suppressHydrationWarning>
+    <html lang="fr" className="dark overflow-x-hidden" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans text-zinc-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans text-zinc-200 overflow-x-hidden`}
       >
         <Providers>{children}</Providers>
       </body>

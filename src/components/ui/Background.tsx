@@ -40,7 +40,7 @@ export default function Background() {
   const blob3Y = useTransform(scrollYProgress, [0, 0.5, 1], ["60%", "25%", "55%"]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
       {/* Base dark color */}
       <div className="absolute inset-0 bg-[#0a0a0f]" />
 
