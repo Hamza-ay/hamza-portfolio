@@ -19,50 +19,51 @@ export default function MatrixRain() {
     resize();
     window.addEventListener("resize", resize);
 
-    const chars = "01アイウエオカキクケコサシスセソ{}[]<>/\\|=+-*&^%$#@!~";
+    const chars = "01{}[]<>=/\\|ハムザアイウエオカキクケコ";
     const fontSize = 14;
     const columns = Math.floor(canvas.width / fontSize);
-    const drops: number[] = Array(columns).fill(1);
+    const drops: number[] = Array(columns).fill(0);
 
-    // Randomize initial positions
     for (let i = 0; i < drops.length; i++) {
-      drops[i] = Math.random() * -100;
+      drops[i] = Math.random() * -50;
     }
 
     function draw() {
       if (!ctx || !canvas) return;
 
-      ctx.fillStyle = "rgba(10, 10, 15, 0.06)";
+      ctx.fillStyle = "rgba(10, 10, 15, 0.08)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const char = chars[Math.floor(Math.random() * chars.length)];
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // Gradient from bright to dim
+        // Head of the stream = brightest
+        const distFromHead = 0;
         const brightness = Math.random();
-        if (brightness > 0.95) {
-          ctx.fillStyle = "rgba(129, 140, 248, 0.9)"; // bright indigo
-          ctx.font = `bold ${fontSize}px monospace`;
-        } else if (brightness > 0.8) {
-          ctx.fillStyle = "rgba(99, 102, 241, 0.5)"; // medium indigo
-          ctx.font = `${fontSize}px monospace`;
+
+        if (brightness > 0.9) {
+          // Bright flash - white/indigo
+          ctx.fillStyle = "rgba(165, 180, 252, 0.95)";
+        } else if (brightness > 0.6) {
+          ctx.fillStyle = "rgba(99, 102, 241, 0.6)";
         } else {
-          ctx.fillStyle = "rgba(67, 56, 202, 0.15)"; // dim indigo
-          ctx.font = `${fontSize}px monospace`;
+          ctx.fillStyle = "rgba(67, 56, 202, 0.25)";
         }
 
         ctx.fillText(char, x, y);
 
-        if (y > canvas.height && Math.random() > 0.975) {
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        drops[i]++;
+        drops[i] += 0.6;
       }
     }
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, 45);
 
     return () => {
       clearInterval(interval);
@@ -73,8 +74,8 @@ export default function MatrixRain() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 -z-20 pointer-events-none"
-      style={{ opacity: 0.4 }}
+      className="fixed inset-0 -z-25 pointer-events-none"
+      style={{ opacity: 0.8, zIndex: -25 }}
     />
   );
 }
