@@ -12,7 +12,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative z-10">
       <Background />
       <MatrixRain />
 

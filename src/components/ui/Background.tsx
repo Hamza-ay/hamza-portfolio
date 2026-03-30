@@ -32,7 +32,6 @@ const symbols = [
 export default function Background() {
   const { scrollYProgress } = useScroll();
 
-  // Gradient blobs that move on scroll
   const blob1X = useTransform(scrollYProgress, [0, 0.5, 1], ["15%", "65%", "25%"]);
   const blob1Y = useTransform(scrollYProgress, [0, 0.5, 1], ["15%", "45%", "80%"]);
   const blob2X = useTransform(scrollYProgress, [0, 0.5, 1], ["80%", "25%", "70%"]);
@@ -41,65 +40,11 @@ export default function Background() {
   const blob3Y = useTransform(scrollYProgress, [0, 0.5, 1], ["60%", "25%", "55%"]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -50 }}>
-      {/* Grid pattern */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(99,102,241,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.07) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%)",
-        }}
-      />
+    <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+      {/* Base dark color */}
+      <div className="absolute inset-0 bg-[#0a0a0f]" />
 
-      {/* Code text layer */}
-      {codeLines.map((line, i) => (
-        <div
-          key={i}
-          className="absolute font-mono text-[11px] text-indigo-500/[0.06] whitespace-nowrap select-none"
-          style={{ left: `${line.x}%`, top: `${line.y}%` }}
-        >
-          {line.text}
-        </div>
-      ))}
-
-      {/* Large floating symbols */}
-      {symbols.map((sym, i) => (
-        <div
-          key={`sym-${i}`}
-          className="absolute font-mono text-indigo-500/[0.04] select-none"
-          style={{ left: `${sym.x}%`, top: `${sym.y}%`, fontSize: sym.size }}
-        >
-          {sym.text}
-        </div>
-      ))}
-
-      {/* Circuit lines */}
-      <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-        <line x1="0" y1="50%" x2="15%" y2="50%" stroke="rgba(99,102,241,0.06)" strokeWidth="1" />
-        <line x1="15%" y1="50%" x2="17%" y2="48%" stroke="rgba(99,102,241,0.06)" strokeWidth="1" />
-        <line x1="17%" y1="48%" x2="30%" y2="48%" stroke="rgba(99,102,241,0.06)" strokeWidth="1" />
-        <circle cx="15%" cy="50%" r="3" fill="rgba(99,102,241,0.12)" />
-        <circle cx="30%" cy="48%" r="3" fill="rgba(99,102,241,0.12)" />
-
-        <line x1="100%" y1="30%" x2="85%" y2="30%" stroke="rgba(139,92,246,0.06)" strokeWidth="1" />
-        <line x1="85%" y1="30%" x2="83%" y2="32%" stroke="rgba(139,92,246,0.06)" strokeWidth="1" />
-        <line x1="83%" y1="32%" x2="70%" y2="32%" stroke="rgba(139,92,246,0.06)" strokeWidth="1" />
-        <circle cx="85%" cy="30%" r="3" fill="rgba(139,92,246,0.12)" />
-        <circle cx="70%" cy="32%" r="3" fill="rgba(139,92,246,0.12)" />
-
-        <line x1="0" y1="75%" x2="20%" y2="75%" stroke="rgba(99,102,241,0.05)" strokeWidth="1" />
-        <line x1="20%" y1="75%" x2="22%" y2="73%" stroke="rgba(99,102,241,0.05)" strokeWidth="1" />
-        <line x1="22%" y1="73%" x2="35%" y2="73%" stroke="rgba(99,102,241,0.05)" strokeWidth="1" />
-
-        <line x1="100%" y1="65%" x2="80%" y2="65%" stroke="rgba(139,92,246,0.05)" strokeWidth="1" />
-        <line x1="80%" y1="65%" x2="78%" y2="67%" stroke="rgba(139,92,246,0.05)" strokeWidth="1" />
-        <line x1="78%" y1="67%" x2="65%" y2="67%" stroke="rgba(139,92,246,0.05)" strokeWidth="1" />
-      </svg>
-
-      {/* Moving gradient blobs */}
+      {/* Moving gradient blobs - ON TOP of dark bg */}
       <motion.div
         style={{ left: blob1X, top: blob1Y }}
         className="absolute w-[700px] h-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px] bg-indigo-600/20"
@@ -112,6 +57,55 @@ export default function Background() {
         style={{ left: blob3X, top: blob3Y }}
         className="absolute w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-pink-600/10"
       />
+
+      {/* Grid pattern */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(99,102,241,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.08) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%)",
+        }}
+      />
+
+      {/* Code text layer */}
+      {codeLines.map((line, i) => (
+        <div
+          key={i}
+          className="absolute font-mono text-[11px] text-indigo-400/[0.08] whitespace-nowrap select-none"
+          style={{ left: `${line.x}%`, top: `${line.y}%` }}
+        >
+          {line.text}
+        </div>
+      ))}
+
+      {/* Large floating code symbols */}
+      {symbols.map((sym, i) => (
+        <div
+          key={`sym-${i}`}
+          className="absolute font-mono text-indigo-400/[0.05] select-none"
+          style={{ left: `${sym.x}%`, top: `${sym.y}%`, fontSize: sym.size }}
+        >
+          {sym.text}
+        </div>
+      ))}
+
+      {/* Circuit lines */}
+      <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+        <line x1="0" y1="50%" x2="15%" y2="50%" stroke="rgba(99,102,241,0.08)" strokeWidth="1" />
+        <line x1="15%" y1="50%" x2="17%" y2="48%" stroke="rgba(99,102,241,0.08)" strokeWidth="1" />
+        <line x1="17%" y1="48%" x2="30%" y2="48%" stroke="rgba(99,102,241,0.08)" strokeWidth="1" />
+        <circle cx="15%" cy="50%" r="3" fill="rgba(99,102,241,0.15)" />
+        <circle cx="30%" cy="48%" r="3" fill="rgba(99,102,241,0.15)" />
+
+        <line x1="100%" y1="30%" x2="85%" y2="30%" stroke="rgba(139,92,246,0.08)" strokeWidth="1" />
+        <line x1="85%" y1="30%" x2="83%" y2="32%" stroke="rgba(139,92,246,0.08)" strokeWidth="1" />
+        <line x1="83%" y1="32%" x2="70%" y2="32%" stroke="rgba(139,92,246,0.08)" strokeWidth="1" />
+        <circle cx="85%" cy="30%" r="3" fill="rgba(139,92,246,0.15)" />
+        <circle cx="70%" cy="32%" r="3" fill="rgba(139,92,246,0.15)" />
+      </svg>
     </div>
   );
 }
