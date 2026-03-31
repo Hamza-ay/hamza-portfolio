@@ -6,18 +6,41 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import GlassCard from "@/components/ui/GlassCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { personalInfo } from "@/data/portfolio";
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend, FiAlertCircle, FiCheck } from "react-icons/fi";
+
+const FORMSPREE_ID = "xlgongqa";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "", consent: false });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:${personalInfo.email}?subject=Contact Portfolio - ${form.name}&body=${encodeURIComponent(form.message)}%0A%0ADe: ${form.name} (${form.email})`;
-    window.open(mailto);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setStatus("sending");
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "", consent: false });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -129,15 +152,18 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-base shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] transition-all duration-300"
+                  disabled={status === "sending"}
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-base shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  {submitted ? (
-                    "Message envoyé !"
-                  ) : (
-                    <>
-                      <FiSend size={16} />
-                      Envoyer
-                    </>
+                  {status === "sending" && "Envoi en cours..."}
+                  {status === "success" && (
+                    <><FiCheck size={16} /> Message envoyé !</>
+                  )}
+                  {status === "error" && (
+                    <><FiAlertCircle size={16} /> Erreur, réessayez</>
+                  )}
+                  {status === "idle" && (
+                    <><FiSend size={16} /> Envoyer</>
                   )}
                 </button>
               </form>
