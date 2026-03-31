@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { skills } from "@/data/portfolio";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
-  SiNodedotjs, SiNestjs, SiPostgresql, SiPython, SiPhp,
+  SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
   SiTensorflow,
 } from "react-icons/si";
@@ -14,7 +14,7 @@ import { FiCpu } from "react-icons/fi";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
-  SiNodedotjs, SiNestjs, SiPostgresql, SiPython, SiPhp,
+  SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
   SiTensorflow,
   SiAnthropic: FiCpu,
