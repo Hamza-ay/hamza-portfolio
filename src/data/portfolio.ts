@@ -31,13 +31,11 @@ export const skills = {
     { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
     { name: "Tailwind CSS", icon: "SiTailwindcss", color: "#06B6D4" },
     { name: "HTML5", icon: "SiHtml5", color: "#E34F26" },
-    { name: "CSS3", icon: "SiCss3", color: "#1572B6" },
   ],
   backend: [
     { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
     { name: "NestJS", icon: "SiNestjs", color: "#E0234E" },
     { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
-    { name: "MySQL", icon: "SiMysql", color: "#4479A1" },
     { name: "Python", icon: "SiPython", color: "#3776AB" },
     { name: "PHP", icon: "SiPhp", color: "#777BB4" },
   ],
@@ -45,14 +43,11 @@ export const skills = {
     { name: "Git", icon: "SiGit", color: "#F05032" },
     { name: "Docker", icon: "SiDocker", color: "#2496ED" },
     { name: "Linux", icon: "SiLinux", color: "#FCC624" },
-    { name: "Nginx", icon: "SiNginx", color: "#009639" },
-    { name: "Supabase", icon: "SiSupabase", color: "#3FCF8E" },
     { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
   ],
   ai: [
     { name: "TensorFlow", icon: "SiTensorflow", color: "#FF6F00" },
-    { name: "Claude AI", icon: "SiAnthropic", color: "#D4A574" },
-    { name: "GitHub Copilot", icon: "SiGithubcopilot", color: "#ffffff" },
+    { name: "Claude Code", icon: "SiAnthropic", color: "#D4A574" },
   ],
 };
 
@@ -106,19 +101,19 @@ export const education = [
     period: "2023 — 2026",
     title: "Master — Traitement du Signal et des Images",
     school: "Université du Littoral Côte d'Opale — Calais",
-    details: "Deep Learning, traitement d'images, reconnaissance de formes, TensorFlow, POO C++",
+    details: "Deep Learning, traitement d'images, reconnaissance de formes, classification d'images (TensorFlow), POO C++. Projets : réseau de neurones sur MNIST, transfer learning VGG16 sur CIFAR-10.",
   },
   {
-    period: "2022 — 2023",
+    period: "Sept. 2022 — Juin 2023",
     title: "Master 1 — Recherche Opérationnelle",
     school: "Université Mouloud Mammeri de Tizi Ouzou — Algérie",
-    details: "Programmation linéaire, gestion des stocks, optimisation",
+    details: "Programmation linéaire, gestion des stocks, optimisation combinatoire, modélisation mathématique.",
   },
   {
-    period: "2018 — 2022",
+    period: "Sept. 2018 — Sept. 2022",
     title: "Licence en Mathématiques",
     school: "Université Mouloud Mammeri de Tizi Ouzou — Algérie",
-    details: "Optimisation, probabilités et statistiques, algèbre linéaire, analyse",
+    details: "1ère année Math-Info, puis spécialisation Mathématiques. Optimisation, probabilités et statistiques, algèbre linéaire, analyse, programmation.",
   },
 ];
 
@@ -200,8 +195,8 @@ L'intégration avec Google Site Kit permet de remonter les données réelles de 
 ];
 
 export const languages = [
-  { name: "Français", level: "C1 (courant)" },
-  { name: "Anglais", level: "B2 (professionnel)" },
+  { name: "Français", level: "TCF C1 (courant)" },
+  { name: "Anglais", level: "CLES B2 (professionnel)" },
   { name: "Kabyle", level: "Langue maternelle" },
 ];
 
@@ -209,5 +204,5 @@ export const interests = [
   { name: "Musculation", emoji: "💪" },
   { name: "Guitare", emoji: "🎸" },
   { name: "Percussion", emoji: "🥁" },
-  { name: "Football", emoji: "⚽" },
+  { name: "Football (7 saisons en club)", emoji: "⚽" },
 ];

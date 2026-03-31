@@ -5,19 +5,18 @@ import { useRef } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { skills } from "@/data/portfolio";
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
-  SiNodedotjs, SiNestjs, SiPostgresql, SiMysql, SiPython, SiPhp,
-  SiGit, SiDocker, SiLinux, SiNginx, SiSupabase, SiWordpress,
-  SiTensorflow, SiGithubcopilot,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
+  SiNodedotjs, SiNestjs, SiPostgresql, SiPython, SiPhp,
+  SiGit, SiDocker, SiLinux, SiWordpress,
+  SiTensorflow,
 } from "react-icons/si";
 import { FiCpu } from "react-icons/fi";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
-  SiCss3: SiCss,
-  SiNodedotjs, SiNestjs, SiPostgresql, SiMysql, SiPython, SiPhp,
-  SiGit, SiDocker, SiLinux, SiNginx, SiSupabase, SiWordpress,
-  SiTensorflow, SiGithubcopilot,
+  SiNodedotjs, SiNestjs, SiPostgresql, SiPython, SiPhp,
+  SiGit, SiDocker, SiLinux, SiWordpress,
+  SiTensorflow,
   SiAnthropic: FiCpu,
 };
 
