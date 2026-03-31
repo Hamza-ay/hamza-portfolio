@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TiltCard from "@/components/ui/TiltCard";
 import { projects } from "@/data/portfolio";
-import { FiGithub, FiExternalLink, FiCode, FiChevronDown } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiCode, FiChevronDown, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,21 +24,79 @@ const itemVariants = {
   },
 };
 
+function ImageCarousel({ images, title }: { images: string[]; title: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const hasMultiple = images.length > 1;
+
+  const prev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+  };
+
+  const next = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+  };
+
+  return (
+    <div className="relative w-full h-44 rounded-xl overflow-hidden border border-white/[0.08] mb-5 bg-[#0d1117] group/carousel">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt={`${title} - ${currentIndex + 1}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="w-full h-full object-cover"
+        />
+      </AnimatePresence>
+
+      {hasMultiple && (
+        <>
+          <button
+            onClick={prev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80"
+            aria-label="Image précédente"
+          >
+            <FiChevronLeft size={14} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80"
+            aria-label="Image suivante"
+          >
+            <FiChevronRight size={14} />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => { e.stopPropagation(); setCurrentIndex(idx); }}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${
+                  idx === currentIndex ? "bg-amber-400 w-3" : "bg-white/40"
+                }`}
+                aria-label={`Image ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   const [expanded, setExpanded] = useState(false);
   const hasDetails = !!project.details;
 
   return (
     <div className="p-6 bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl hover:border-amber-500/30 transition-all duration-300 h-full group flex flex-col">
-      {/* Project image */}
-      <div className="w-full h-44 rounded-xl overflow-hidden border border-white/[0.08] mb-5 bg-[#0d1117]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+      {/* Project image carousel */}
+      <ImageCarousel images={project.images} title={project.title} />
 
       <div className="flex items-center gap-3 mb-3">
         <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
