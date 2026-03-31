@@ -26,9 +26,9 @@ export default function Home() {
       <SectionDivider color="purple" />
       <TechStack />
       <SectionDivider color="cyan" />
-      <Experience />
-      <SectionDivider color="pink" />
       <Projects />
+      <SectionDivider color="pink" />
+      <Experience />
       <SectionDivider color="indigo" />
       <Contact />
       <Footer />

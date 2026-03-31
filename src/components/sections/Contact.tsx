@@ -9,7 +9,7 @@ import { personalInfo } from "@/data/portfolio";
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", consent: false });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,7 +43,7 @@ export default function Contact() {
                   <ContactItem
                     href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
                     icon={<FiPhone size={18} className="text-purple-400" />}
-                    label="Telephone"
+                    label="Téléphone"
                     value={personalInfo.phone}
                     colorClass="bg-purple-500/10 border-purple-500/20 group-hover:bg-purple-500/20"
                   />
@@ -110,12 +110,29 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 transition-colors resize-none"
                   />
                 </div>
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="rgpd-consent"
+                    checked={form.consent}
+                    onChange={(e) => setForm((s) => ({ ...s, consent: e.target.checked }))}
+                    required
+                    className="mt-1 w-4 h-4 rounded border-white/20 bg-white/[0.03] text-indigo-500 focus:ring-indigo-500/30 focus:ring-offset-0 accent-indigo-500"
+                  />
+                  <label htmlFor="rgpd-consent" className="text-xs text-zinc-500 leading-relaxed">
+                    J&apos;accepte que mes informations soient utilisées pour me recontacter dans le cadre de ma demande.
+                    Conformément au RGPD, aucune donnée n&apos;est stockée sur ce site.{" "}
+                    <a href="/hamza-portfolio/mentions-legales" className="text-indigo-400 hover:text-indigo-300 underline">
+                      Mentions légales
+                    </a>
+                  </label>
+                </div>
                 <button
                   type="submit"
                   className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-base shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] transition-all duration-300"
                 >
                   {submitted ? (
-                    "Message envoye !"
+                    "Message envoyé !"
                   ) : (
                     <>
                       <FiSend size={16} />

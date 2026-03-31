@@ -10,16 +10,18 @@ export default function About() {
   return (
     <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading title="A propos" subtitle="Mon parcours et ce qui me motive" />
+        <SectionHeading title="À propos" subtitle="Mon parcours et ce qui me motive" />
 
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {/* Left: Bio */}
           <ScrollReveal variant="slideLeft" delay={0.1}>
             <GlassCard className="p-8 h-full">
               <h3 className="text-xl font-bold text-white mb-4">Qui suis-je ?</h3>
-              <p className="text-zinc-400 leading-relaxed mb-6">
-                {personalInfo.bio}
-              </p>
+              <div className="text-zinc-400 leading-relaxed mb-6 space-y-4">
+                {personalInfo.aboutDescription.split("\n\n").map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-4 text-sm text-zinc-400">
                 <span className="flex items-center gap-2">
                   <FiMapPin className="text-indigo-400" />
@@ -48,7 +50,7 @@ export default function About() {
 
               {/* Interests */}
               <div className="mt-6 pt-6 border-t border-white/[0.06]">
-                <h4 className="text-sm font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Centres d&apos;interet</h4>
+                <h4 className="text-sm font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Centres d&apos;intérêt</h4>
                 <div className="flex flex-wrap gap-3">
                   {interests.map((i) => (
                     <span

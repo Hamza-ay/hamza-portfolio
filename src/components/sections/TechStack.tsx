@@ -53,8 +53,8 @@ export default function TechStack() {
 
       <div className="max-w-6xl mx-auto">
         <SectionHeading
-          title="Competences"
-          subtitle="Les technologies que je maitrise"
+          title="Compétences"
+          subtitle="Les technologies que je maîtrise"
         />
 
         <div className="grid gap-10">

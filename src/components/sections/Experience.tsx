@@ -23,7 +23,7 @@ export default function Experience() {
 
       <div className="max-w-4xl mx-auto">
         <SectionHeading
-          title="Experience"
+          title="Expérience"
           subtitle="Mon parcours professionnel"
         />
 

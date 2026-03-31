@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="mt-4 sm:mt-8 text-base sm:text-xl md:text-3xl text-zinc-300 font-light">
             <span>{personalInfo.title}</span>
             <br />
-            <span>Je cree </span>
+            <span>Je crée </span>
             <TypewriterEffect words={personalInfo.typingWords} />
           </div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full border-2 border-zinc-700 text-zinc-300 font-medium text-sm sm:text-base hover:border-purple-500 hover:text-white hover:bg-purple-500/10 transition-all duration-300 backdrop-blur-sm"
           >
             <FiDownload size={18} />
-            Telecharger CV
+            Télécharger CV
           </a>
         </motion.div>
       </div>

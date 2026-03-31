@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="py-8 px-6 border-t border-white/[0.05]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-zinc-500">
-          &copy; {new Date().getFullYear()} {personalInfo.name} {personalInfo.lastName}. Tous droits reserves.
+          &copy; {new Date().getFullYear()} {personalInfo.name} {personalInfo.lastName}. Tous droits réservés.
         </p>
 
         <div className="flex items-center gap-4">
@@ -36,9 +36,16 @@ export default function Footer() {
           </a>
         </div>
 
-        <p className="text-xs text-zinc-600">
-          Built with Next.js, HeroUI & Framer Motion
-        </p>
+        <div className="flex items-center gap-4 text-xs text-zinc-600">
+          <a
+            href="/hamza-portfolio/mentions-legales"
+            className="hover:text-indigo-400 transition-colors"
+          >
+            Mentions légales
+          </a>
+          <span>·</span>
+          <span>Built with Next.js, HeroUI & Framer Motion</span>
+        </div>
       </div>
     </footer>
   );
