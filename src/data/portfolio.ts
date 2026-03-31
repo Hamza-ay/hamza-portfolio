@@ -8,7 +8,7 @@ export const personalInfo = {
   github: "https://github.com/Hamza-ay",
   linkedin: "https://www.linkedin.com/in/hamza-ait-yahiatene-7a795328a",
   bio: "Passionné par le développement web et les sciences des données, je conçois des applications complètes — du backend à l'interface utilisateur. Mon parcours en mathématiques et traitement du signal m'a donné une approche rigoureuse de la résolution de problèmes, que j'applique aujourd'hui au développement Full-Stack avec React, Next.js, Node.js et TypeScript.",
-  aboutDescription: `Depuis mes études en mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou en Algérie, j'ai toujours été fasciné par la résolution de problèmes complexes. C'est cette curiosité qui m'a naturellement conduit vers l'informatique, et plus particulièrement vers le développement web et les sciences des données.
+  aboutDescription: `Je m'appelle Hamza Ait Yahiatene, j'ai 25 ans et je suis développeur Full-Stack. Depuis mes études en mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou en Algérie, j'ai toujours été fasciné par la résolution de problèmes complexes. C'est cette curiosité qui m'a naturellement conduit vers l'informatique, et plus particulièrement vers le développement web et les sciences des données.
 
 Aujourd'hui en Master Traitement du Signal et des Images à l'Université du Littoral Côte d'Opale (Calais), je combine une base solide en mathématiques appliquées — optimisation, probabilités, algèbre linéaire — avec une expertise concrète en développement Full-Stack. Ce double profil me permet d'aborder les projets avec une rigueur scientifique tout en livrant des applications performantes et bien architecturées.
 
