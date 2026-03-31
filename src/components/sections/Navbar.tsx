@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "À propos", href: "#about" },
   { label: "Compétences", href: "#skills" },
-  { label: "Expérience", href: "#experience" },
   { label: "Projets", href: "#projects" },
+  { label: "Expérience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -37,12 +37,11 @@ export default function Navbar() {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className={`fixed top-4 z-50 px-6 py-3 rounded-full transition-all duration-500 left-1/2 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 max-md:left-4 max-md:translate-x-0 ${
           scrolled
-            ? "bg-zinc-900/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black/30"
-            : "bg-zinc-900/30 backdrop-blur-sm"
+            ? "bg-neutral-900/80 backdrop-blur-xl border border-white/[0.08] shadow-2xl shadow-black/30"
+            : "bg-neutral-900/30 backdrop-blur-sm"
         }`}
       >
         <div className="flex items-center gap-8">
-          {/* Mobile: burger a gauche, H a droite */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-white p-1 order-first"
@@ -58,7 +57,7 @@ export default function Navbar() {
           </button>
 
           <a href="#" className="font-bold text-xl text-white tracking-tight">
-            H<span className="text-indigo-400">.</span>
+            H<span className="text-amber-400">.</span>
           </a>
 
           <div className="hidden md:flex items-center gap-6">
@@ -66,24 +65,23 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 relative group"
+                className="text-sm text-stone-400 hover:text-white transition-colors duration-200 relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
 
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-600/20"
+            className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-amber-600 text-white text-sm font-medium hover:bg-amber-500 transition-colors shadow-lg shadow-amber-600/20"
           >
             Me contacter
           </a>
         </div>
       </motion.nav>
 
-      {/* Mobile dropdown - compact, aligned right */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -91,7 +89,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-4 z-40 w-52 p-4 rounded-2xl bg-zinc-900/95 backdrop-blur-xl border border-white/10 md:hidden"
+            className="fixed top-16 left-4 z-40 w-52 p-4 rounded-2xl bg-neutral-900/95 backdrop-blur-xl border border-white/10 md:hidden"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
@@ -99,7 +97,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm text-zinc-300 hover:text-white transition-colors py-1"
+                  className="text-sm text-stone-300 hover:text-white transition-colors py-1"
                 >
                   {link.label}
                 </a>
@@ -107,7 +105,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500 transition-colors mt-1"
+                className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-amber-600 text-white text-sm font-medium hover:bg-amber-500 transition-colors mt-1"
               >
                 Me contacter
               </a>

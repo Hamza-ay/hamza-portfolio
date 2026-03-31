@@ -31,7 +31,7 @@ export default function MatrixRain() {
     function draw() {
       if (!ctx || !canvas) return;
 
-      ctx.fillStyle = "rgba(10, 10, 15, 0.08)";
+      ctx.fillStyle = "rgba(15, 15, 15, 0.08)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.font = `${fontSize}px monospace`;
@@ -46,12 +46,12 @@ export default function MatrixRain() {
         const brightness = Math.random();
 
         if (brightness > 0.9) {
-          // Bright flash - white/indigo
-          ctx.fillStyle = "rgba(165, 180, 252, 0.95)";
+          // Bright flash - amber
+          ctx.fillStyle = "rgba(252, 211, 77, 0.95)";
         } else if (brightness > 0.6) {
-          ctx.fillStyle = "rgba(99, 102, 241, 0.6)";
+          ctx.fillStyle = "rgba(245, 158, 11, 0.6)";
         } else {
-          ctx.fillStyle = "rgba(67, 56, 202, 0.25)";
+          ctx.fillStyle = "rgba(180, 83, 9, 0.25)";
         }
 
         ctx.fillText(char, x, y);

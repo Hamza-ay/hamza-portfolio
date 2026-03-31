@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-white/[0.05]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-zinc-500">
+        <p className="text-sm text-stone-500">
           &copy; {new Date().getFullYear()} {personalInfo.name} {personalInfo.lastName}. Tous droits réservés.
         </p>
 
@@ -16,7 +16,7 @@ export default function Footer() {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-indigo-400 transition-colors"
+            className="text-stone-500 hover:text-amber-400 transition-colors"
           >
             <FiGithub size={18} />
           </a>
@@ -24,22 +24,22 @@ export default function Footer() {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-indigo-400 transition-colors"
+            className="text-stone-500 hover:text-amber-400 transition-colors"
           >
             <FiLinkedin size={18} />
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="text-zinc-500 hover:text-indigo-400 transition-colors"
+            className="text-stone-500 hover:text-amber-400 transition-colors"
           >
             <FiMail size={18} />
           </a>
         </div>
 
-        <div className="flex items-center gap-4 text-xs text-zinc-600">
+        <div className="flex items-center gap-4 text-xs text-stone-600">
           <a
             href="/hamza-portfolio/mentions-legales"
-            className="hover:text-indigo-400 transition-colors"
+            className="hover:text-amber-400 transition-colors"
           >
             Mentions légales
           </a>

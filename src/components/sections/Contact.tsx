@@ -45,7 +45,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 relative">
-      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-indigo-600/8 rounded-full blur-[120px] -z-10" />
+      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-amber-600/8 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-4xl mx-auto">
         <SectionHeading title="Contact" subtitle="Envie de collaborer ? Contactez-moi !" />
@@ -58,24 +58,24 @@ export default function Contact() {
                 <div className="space-y-5">
                   <ContactItem
                     href={`mailto:${personalInfo.email}`}
-                    icon={<FiMail size={18} className="text-indigo-400" />}
+                    icon={<FiMail size={18} className="text-amber-400" />}
                     label="Email"
                     value={personalInfo.email}
-                    colorClass="bg-indigo-500/10 border-indigo-500/20 group-hover:bg-indigo-500/20"
+                    colorClass="bg-amber-500/10 border-amber-500/20 group-hover:bg-amber-500/20"
                   />
                   <ContactItem
                     href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
-                    icon={<FiPhone size={18} className="text-purple-400" />}
+                    icon={<FiPhone size={18} className="text-orange-400" />}
                     label="Téléphone"
                     value={personalInfo.phone}
-                    colorClass="bg-purple-500/10 border-purple-500/20 group-hover:bg-purple-500/20"
+                    colorClass="bg-orange-500/10 border-orange-500/20 group-hover:bg-orange-500/20"
                   />
-                  <div className="flex items-center gap-4 text-zinc-300">
-                    <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center shrink-0">
-                      <FiMapPin size={18} className="text-pink-400" />
+                  <div className="flex items-center gap-4 text-stone-300">
+                    <div className="w-10 h-10 rounded-lg bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center shrink-0">
+                      <FiMapPin size={18} className="text-yellow-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-zinc-500">Localisation</p>
+                      <p className="text-xs text-stone-500">Localisation</p>
                       <p className="text-sm">{personalInfo.location}</p>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -4, scale: 1.05 }}
-                    className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-zinc-400 hover:text-white hover:border-indigo-500/40 transition-colors"
+                    className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-stone-400 hover:text-white hover:border-amber-500/40 transition-colors"
                   >
                     {s.icon}
                   </motion.a>
@@ -123,14 +123,14 @@ export default function Contact() {
                   required
                 />
                 <div>
-                  <label className="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+                  <label className="block text-sm font-medium text-stone-400 mb-2">Message</label>
                   <textarea
                     placeholder="Votre message..."
                     value={form.message}
                     onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-stone-600 focus:border-amber-500/50 focus:outline-none focus:ring-1 focus:ring-amber-500/30 transition-colors resize-none"
                   />
                 </div>
                 <div className="flex items-start gap-3">
@@ -140,12 +140,12 @@ export default function Contact() {
                     checked={form.consent}
                     onChange={(e) => setForm((s) => ({ ...s, consent: e.target.checked }))}
                     required
-                    className="mt-1 w-4 h-4 rounded border-white/20 bg-white/[0.03] text-indigo-500 focus:ring-indigo-500/30 focus:ring-offset-0 accent-indigo-500"
+                    className="mt-1 w-4 h-4 rounded border-white/20 bg-white/[0.03] text-amber-500 focus:ring-amber-500/30 focus:ring-offset-0 accent-amber-500"
                   />
-                  <label htmlFor="rgpd-consent" className="text-xs text-zinc-500 leading-relaxed">
+                  <label htmlFor="rgpd-consent" className="text-xs text-stone-500 leading-relaxed">
                     J&apos;accepte que mes informations soient utilisées pour me recontacter dans le cadre de ma demande.
                     Conformément au RGPD, aucune donnée n&apos;est stockée sur ce site.{" "}
-                    <a href="/hamza-portfolio/mentions-legales" className="text-indigo-400 hover:text-indigo-300 underline">
+                    <a href="/hamza-portfolio/mentions-legales" className="text-amber-400 hover:text-amber-300 underline">
                       Mentions légales
                     </a>
                   </label>
@@ -153,7 +153,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-base shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold text-base shadow-[0_0_25px_rgba(245,158,11,0.3)] hover:shadow-[0_0_40px_rgba(245,158,11,0.5)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {status === "sending" && "Envoi en cours..."}
                   {status === "success" && (
@@ -189,12 +189,12 @@ function ContactItem({
   colorClass: string;
 }) {
   return (
-    <a href={href} className="flex items-center gap-4 text-zinc-300 hover:text-indigo-400 transition-colors group">
+    <a href={href} className="flex items-center gap-4 text-stone-300 hover:text-amber-400 transition-colors group">
       <div className={`w-10 h-10 rounded-lg border flex items-center justify-center shrink-0 transition-colors ${colorClass}`}>
         {icon}
       </div>
       <div>
-        <p className="text-xs text-zinc-500">{label}</p>
+        <p className="text-xs text-stone-500">{label}</p>
         <p className="text-sm">{value}</p>
       </div>
     </a>
@@ -218,14 +218,14 @@ function FormField({
 }) {
   return (
     <div>
-      <label className="block text-sm font-medium text-zinc-400 mb-2">{label}</label>
+      <label className="block text-sm font-medium text-stone-400 mb-2">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required={required}
-        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 transition-colors"
+        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-stone-600 focus:border-amber-500/50 focus:outline-none focus:ring-1 focus:ring-amber-500/30 transition-colors"
       />
     </div>
   );

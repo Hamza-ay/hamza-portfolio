@@ -21,15 +21,15 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <SectionDivider color="indigo" />
+      <SectionDivider color="amber" />
       <About />
-      <SectionDivider color="purple" />
+      <SectionDivider color="orange" />
       <TechStack />
-      <SectionDivider color="cyan" />
+      <SectionDivider color="amber" />
       <Projects />
-      <SectionDivider color="pink" />
+      <SectionDivider color="yellow" />
       <Experience />
-      <SectionDivider color="indigo" />
+      <SectionDivider color="orange" />
       <Contact />
       <Footer />
       </main>

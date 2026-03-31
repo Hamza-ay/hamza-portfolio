@@ -16,22 +16,17 @@ export default function GradientBlobs() {
 
   return (
     <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -30 }}>
-      {/* Primary indigo blob */}
       <motion.div
         style={{ left: blob1X, top: blob1Y }}
-        className="absolute w-[700px] h-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px] bg-indigo-600/20"
+        className="absolute w-[700px] h-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px] bg-amber-600/20"
       />
-
-      {/* Secondary purple blob */}
       <motion.div
         style={{ left: blob2X, top: blob2Y }}
-        className="absolute w-[550px] h-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] bg-purple-600/15"
+        className="absolute w-[550px] h-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] bg-orange-600/15"
       />
-
-      {/* Third pink blob */}
       <motion.div
         style={{ left: blob3X, top: blob3Y }}
-        className="absolute w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-pink-600/10"
+        className="absolute w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-yellow-600/10"
       />
     </div>
   );

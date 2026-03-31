@@ -116,7 +116,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans text-zinc-200 overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans text-stone-200 overflow-x-hidden`}
       >
         <Providers>{children}</Providers>
       </body>

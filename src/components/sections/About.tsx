@@ -17,30 +17,30 @@ export default function About() {
           <ScrollReveal variant="slideLeft" delay={0.1}>
             <GlassCard className="p-8 h-full">
               <h3 className="text-xl font-bold text-white mb-4">Qui suis-je ?</h3>
-              <div className="text-zinc-400 leading-relaxed mb-6 space-y-4">
+              <div className="text-stone-400 leading-relaxed mb-6 space-y-4">
                 {personalInfo.aboutDescription.split("\n\n").map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4 text-sm text-zinc-400">
+              <div className="flex flex-wrap gap-4 text-sm text-stone-400">
                 <span className="flex items-center gap-2">
-                  <FiMapPin className="text-indigo-400" />
+                  <FiMapPin className="text-amber-400" />
                   {personalInfo.location}
                 </span>
                 <span className="flex items-center gap-2">
-                  <FiCalendar className="text-indigo-400" />
+                  <FiCalendar className="text-amber-400" />
                   {personalInfo.availability}
                 </span>
               </div>
 
               {/* Languages */}
               <div className="mt-6 pt-6 border-t border-white/[0.06]">
-                <h4 className="text-sm font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Langues</h4>
+                <h4 className="text-sm font-semibold text-stone-300 mb-3 uppercase tracking-wider">Langues</h4>
                 <div className="flex flex-wrap gap-3">
                   {languages.map((lang) => (
                     <span
                       key={lang.name}
-                      className="px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-sm text-zinc-300"
+                      className="px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-sm text-stone-300"
                     >
                       {lang.name} — {lang.level}
                     </span>
@@ -50,12 +50,12 @@ export default function About() {
 
               {/* Interests */}
               <div className="mt-6 pt-6 border-t border-white/[0.06]">
-                <h4 className="text-sm font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Centres d&apos;intérêt</h4>
+                <h4 className="text-sm font-semibold text-stone-300 mb-3 uppercase tracking-wider">Centres d&apos;intérêt</h4>
                 <div className="flex flex-wrap gap-3">
                   {interests.map((i) => (
                     <span
                       key={i.name}
-                      className="px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-sm text-zinc-300"
+                      className="px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-sm text-stone-300"
                     >
                       {i.emoji} {i.name}
                     </span>
@@ -71,12 +71,12 @@ export default function About() {
               <h3 className="text-xl font-bold text-white mb-6">Formation</h3>
               <div className="space-y-6">
                 {education.map((edu, idx) => (
-                  <div key={idx} className="relative pl-6 border-l-2 border-indigo-500/30">
-                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500/20 border-2 border-indigo-500" />
-                    <span className="text-xs font-mono text-indigo-400">{edu.period}</span>
+                  <div key={idx} className="relative pl-6 border-l-2 border-amber-500/30">
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-amber-500/20 border-2 border-amber-500" />
+                    <span className="text-xs font-mono text-amber-400">{edu.period}</span>
                     <h4 className="text-base font-semibold text-white mt-1">{edu.title}</h4>
-                    <p className="text-sm text-zinc-400 mt-0.5">{edu.school}</p>
-                    <p className="text-xs text-zinc-500 mt-1">{edu.details}</p>
+                    <p className="text-sm text-stone-400 mt-0.5">{edu.school}</p>
+                    <p className="text-xs text-stone-500 mt-1">{edu.details}</p>
                   </div>
                 ))}
               </div>

@@ -44,9 +44,9 @@ export default function TypewriterEffect({
   }, [displayed, isDeleting, wordIndex, words, typingSpeed, pauseMs]);
 
   return (
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400">
       {displayed}
-      <span className="animate-pulse text-indigo-400">|</span>
+      <span className="animate-pulse text-amber-400">|</span>
     </span>
   );
 }
