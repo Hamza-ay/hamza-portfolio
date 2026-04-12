@@ -58,7 +58,7 @@ export const experiences = [
     period: "Fév. 2026 — Avr. 2026",
     title: "Stagiaire Développeur Web & Automatisations",
     company: "ON WEB DESIGN",
-    location: "Paris",
+    location: "Lille",
     description: "Agence digitale",
     tasks: [
       "Développement de sites web responsives avec HTML5, CSS3, JavaScript, PHP",
