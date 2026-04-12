@@ -5,18 +5,20 @@ import { useRef } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { skills } from "@/data/portfolio";
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
-  SiTensorflow,
+  SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
+  SiNodedotjs,
 } from "react-icons/si";
 import { FiCpu } from "react-icons/fi";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
-  SiTensorflow,
+  SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
+  SiNodedotjs,
   SiAnthropic: FiCpu,
 };
 
@@ -39,10 +41,10 @@ const itemVariants = {
 };
 
 const categories = [
+  { key: "data" as const, label: "Data Science & IA" },
   { key: "frontend" as const, label: "Front-End" },
   { key: "backend" as const, label: "Back-End" },
   { key: "tools" as const, label: "Outils & DevOps" },
-  { key: "ai" as const, label: "IA & Automatisation" },
 ];
 
 export default function TechStack() {

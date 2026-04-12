@@ -1,52 +1,55 @@
 export const personalInfo = {
   name: "Hamza",
   lastName: "AIT YAHIATENE",
-  title: "Développeur Full-Stack",
+  title: "Data Scientist & Développeur Full-Stack",
   email: "aityahiatenehamza0@gmail.com",
   phone: "07 48 41 41 22",
   location: "Lille, France",
   github: "https://github.com/Hamza-ay",
   linkedin: "https://www.linkedin.com/in/hamza-ait-yahiatene-7a795328a",
-  bio: "Passionné par le développement web et les sciences des données, je conçois des applications complètes — du backend à l'interface utilisateur. Mon parcours en mathématiques et traitement du signal m'a donné une approche rigoureuse de la résolution de problèmes, que j'applique aujourd'hui au développement Full-Stack avec React, Next.js, Node.js et TypeScript.",
-  aboutDescription: `Je m'appelle Hamza Ait Yahiatene, j'ai 25 ans et je suis fraîchement diplômé d'un Master en Traitement du Signal et des Images à l'Université du Littoral Côte d'Opale (Calais). Depuis mes études en mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou en Algérie, j'ai toujours été fasciné par la résolution de problèmes complexes. C'est cette curiosité qui m'a naturellement conduit vers l'informatique, et plus particulièrement vers le développement web et les sciences des données.
+  bio: "Passionné par la data science et le développement d'applications intelligentes, je transforme des données brutes en insights stratégiques et en produits concrets. Mon Master en Traitement du Signal et des Images, combiné à une base solide en mathématiques appliquées, me permet de concevoir des pipelines de machine learning, des dashboards analytiques temps réel et des applications full-stack pilotées par la donnée.",
+  aboutDescription: `Je m'appelle Hamza Ait Yahiatene, j'ai 25 ans et je suis fraîchement diplômé d'un Master en Traitement du Signal et des Images à l'Université du Littoral Côte d'Opale (Calais). Depuis mes études en mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou en Algérie, j'ai toujours été fasciné par l'extraction de sens à partir des données. C'est cette curiosité qui m'a naturellement conduit vers la data science et le développement d'applications intelligentes.
 
-Mon parcours académique m'a permis de construire une base solide en mathématiques appliquées — optimisation, probabilités, algèbre linéaire — que je combine aujourd'hui avec une expertise concrète en développement Full-Stack. Ce double profil me permet d'aborder les projets avec une rigueur scientifique tout en livrant des applications performantes et bien architecturées.
+Mon parcours académique m'a permis de construire une base solide en mathématiques appliquées — optimisation, statistiques, algèbre linéaire — que je combine avec une expertise pratique en machine learning (Scikit-learn, TensorFlow), analyse de données (Pandas, SQL) et visualisation. Ce double profil data + développement me permet de couvrir l'ensemble de la chaîne : de l'exploration des données à la mise en production de modèles et dashboards.
 
-Ce qui me motive, c'est de transformer des idées en produits concrets. Qu'il s'agisse de concevoir une plateforme SaaS de home staging par IA, d'architecturer un système de microservices pour la gestion immobilière, ou de développer un plugin WordPress complet — chaque projet a été une occasion d'apprendre et de repousser mes limites.
+Ce qui me motive, c'est de transformer des données en décisions. Qu'il s'agisse de concevoir un pipeline de traitement d'images par IA, de construire des tableaux de bord analytiques temps réel pour la gestion immobilière, ou d'entraîner des modèles de classification — chaque projet a été une occasion de repousser mes limites.
 
-Je suis convaincu que les meilleurs développeurs sont ceux qui comprennent le « pourquoi » derrière le code. Mon background en data science et en traitement d'images me donne une perspective unique sur l'intégration de l'intelligence artificielle dans des applications web modernes.`,
+Je suis convaincu que les meilleurs data scientists sont ceux qui savent aussi mettre en production. Mon expertise full-stack (React, NestJS, PostgreSQL) me donne une perspective unique pour intégrer l'intelligence artificielle directement dans des applications web performantes.`,
   availability: "Disponible immédiatement",
   typingWords: [
-    "des applications web",
-    "des APIs performantes",
-    "des interfaces modernes",
-    "des solutions IA",
+    "des modèles prédictifs",
+    "des dashboards analytiques",
+    "des pipelines de données",
+    "des applications IA",
   ],
 };
 
 export const skills = {
+  data: [
+    { name: "Python", icon: "SiPython", color: "#3776AB" },
+    { name: "TensorFlow", icon: "SiTensorflow", color: "#FF6F00" },
+    { name: "Pandas", icon: "SiPandas", color: "#150458" },
+    { name: "Scikit-learn", icon: "SiScikitlearn", color: "#F7931E" },
+    { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
+    { name: "NumPy", icon: "SiNumpy", color: "#013243" },
+  ],
   frontend: [
     { name: "React", icon: "SiReact", color: "#61DAFB" },
     { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
     { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
     { name: "Tailwind CSS", icon: "SiTailwindcss", color: "#06B6D4" },
-    { name: "HTML5", icon: "SiHtml5", color: "#E34F26" },
   ],
   backend: [
     { name: "NestJS", icon: "SiNestjs", color: "#E0234E" },
-    { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
-    { name: "Python", icon: "SiPython", color: "#3776AB" },
+    { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
     { name: "PHP", icon: "SiPhp", color: "#777BB4" },
+    { name: "Docker", icon: "SiDocker", color: "#2496ED" },
   ],
   tools: [
     { name: "Git", icon: "SiGit", color: "#F05032" },
-    { name: "Docker", icon: "SiDocker", color: "#2496ED" },
     { name: "Linux", icon: "SiLinux", color: "#FCC624" },
-    { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
-  ],
-  ai: [
-    { name: "TensorFlow", icon: "SiTensorflow", color: "#FF6F00" },
     { name: "Claude Code", icon: "SiAnthropic", color: "#D4A574" },
+    { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
   ],
 };
 
@@ -73,14 +76,14 @@ export const experiences = [
     location: "Lille",
     description: "SAS — Conciergerie Airbnb",
     tasks: [
-      "Développement d'interfaces React/Next.js pour la gestion des interventions et facturation",
-      "Création d'APIs Node.js/TypeScript pour le planning et suivi opérationnel temps réel",
+      "Analyse de données opérationnelles avec PostgreSQL : dashboards temps réel, valorisation des stocks FIFO, métriques d'activité et KPIs",
+      "Conception de visualisations de données interactives (Recharts) : graphiques de CA, suivi des interventions, statistiques par propriété et par agent",
+      "Développement d'un service de machine learning pour l'optimisation des tournées de livraison (algorithme VROOM) et la prédiction de besoins en linge",
       "Développement d'un portail livreur pour le transfert de linge entre entrepôts et l'organisation de tournées quotidiennes de dépôt dans les logements",
-      "Architecture MCP : configuration de serveurs, développement de tools métier",
-      "Intégration WhatsApp Bot pour notifications et communication automatisée",
+      "Création d'APIs Node.js/TypeScript pour le suivi opérationnel temps réel et l'automatisation des workflows",
       "Pair programming IA-augmenté avec Claude Code et GitHub Copilot",
     ],
-    tags: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "MCP"],
+    tags: ["Python", "PostgreSQL", "Data Viz", "React", "NestJS", "TypeScript"],
   },
   {
     period: "Avr. 2024 — Juin 2024",
@@ -134,15 +137,17 @@ L'application intègre un système de crédits avec paiement via Stripe et PayPa
     featured: true,
   },
   {
-    title: "Properis — Plateforme de Gestion",
+    title: "Properis — Plateforme de Gestion Data-Driven",
     description:
-      "Application full-stack de gestion pour conciergerie Airbnb : interventions, équipes, stocks, facturation, logistique linge et planning temps réel.",
-    details: `Properis est une plateforme complète de gestion conçue pour une conciergerie Airbnb. Elle couvre l'ensemble du cycle opérationnel : de la synchronisation automatique des réservations iCal à la facturation des interventions, en passant par la gestion des équipes, le suivi des stocks de linge et produits, et un planning temps réel avec WebSocket.
+      "Application full-stack pilotée par la donnée pour conciergerie Airbnb : dashboards analytiques, visualisation temps réel, optimisation ML des tournées, gestion de stocks FIFO.",
+    details: `Properis est une plateforme complète de gestion conçue pour une conciergerie Airbnb, avec un fort accent sur l'analyse de données et la prise de décision data-driven. Elle couvre l'ensemble du cycle opérationnel avec des dashboards analytiques temps réel : suivi du chiffre d'affaires (HT/TTC), visualisation des interventions par propriété, métriques d'activité des agents, et valorisation des stocks de linge selon la méthode FIFO.
 
-La plateforme intègre un portail livreur dédié à la logistique du linge : transferts entre un entrepôt principal et des entrepôts secondaires, et organisation de tournées quotidiennes pour déposer le linge propre dans les logements. L'optimisation des itinéraires permet de minimiser les temps de trajet et d'assurer une couverture efficace de l'ensemble du parc immobilier.
+Le volet data science inclut un service de machine learning pour l'optimisation des tournées de livraison de linge via l'algorithme VROOM (Vehicle Routing), la prédiction des besoins en stocks par propriété, et l'analyse des patterns de réservation à partir des données iCal Airbnb/Booking. Les visualisations interactives (Recharts) permettent d'explorer les données à travers des graphiques de tendances, des tableaux croisés et des indicateurs clés de performance.
 
-L'architecture repose sur plus de 14 microservices NestJS (authentification, CRM, calendrier, interventions, stocks, finance, notifications, messagerie, livraison…), orchestrés par un API Gateway. Chaque service possède sa propre base PostgreSQL via Prisma ORM, et communique par événements Redis Pub/Sub. Le frontend comprend quatre portails distincts — administration, agents terrain, livreurs et clients — tous développés en Next.js avec Tailwind CSS. Chaque portail est entièrement responsive mobile et intégré en PWA (Progressive Web App), permettant aux agents terrain, livreurs et clients d'accéder à la plateforme directement depuis leur smartphone comme une application native. L'ensemble est conteneurisé avec Docker et déployé sur un serveur OVH avec Nginx, SSL Let's Encrypt et monitoring complet.`,
-    tags: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker"],
+La plateforme intègre un portail livreur dédié à la logistique du linge : transferts entre un entrepôt principal et des entrepôts secondaires, et organisation de tournées quotidiennes optimisées pour déposer le linge propre dans les logements.
+
+L'architecture repose sur plus de 14 microservices NestJS orchestrés par un API Gateway, chacun avec sa propre base PostgreSQL via Prisma ORM et communication par événements Redis Pub/Sub. Le frontend comprend quatre portails distincts — administration, agents terrain, livreurs et clients — tous développés en Next.js avec Tailwind CSS, responsive mobile et intégrés en PWA. L'ensemble est conteneurisé avec Docker et déployé sur OVH avec Nginx et monitoring complet.`,
+    tags: ["PostgreSQL", "Python", "Data Viz", "NestJS", "React", "Docker"],
     images: [`${basePath}/projects/properis.svg`],
     github: "#",
     live: "#",
