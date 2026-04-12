@@ -75,6 +75,7 @@ export const experiences = [
     tasks: [
       "Développement d'interfaces React/Next.js pour la gestion des interventions et facturation",
       "Création d'APIs Node.js/TypeScript pour le planning et suivi opérationnel temps réel",
+      "Développement d'un portail livreur pour le transfert de linge entre entrepôts et l'organisation de tournées quotidiennes de dépôt dans les logements",
       "Architecture MCP : configuration de serveurs, développement de tools métier",
       "Intégration WhatsApp Bot pour notifications et communication automatisée",
       "Pair programming IA-augmenté avec Claude Code et GitHub Copilot",
@@ -135,10 +136,12 @@ L'application intègre un système de crédits avec paiement via Stripe et PayPa
   {
     title: "Properis — Plateforme de Gestion",
     description:
-      "Application full-stack de gestion pour conciergerie Airbnb : interventions, équipes, stocks, facturation, planning temps réel.",
+      "Application full-stack de gestion pour conciergerie Airbnb : interventions, équipes, stocks, facturation, logistique linge et planning temps réel.",
     details: `Properis est une plateforme complète de gestion conçue pour une conciergerie Airbnb. Elle couvre l'ensemble du cycle opérationnel : de la synchronisation automatique des réservations iCal à la facturation des interventions, en passant par la gestion des équipes, le suivi des stocks de linge et produits, et un planning temps réel avec WebSocket.
 
-L'architecture repose sur plus de 14 microservices NestJS (authentification, CRM, calendrier, interventions, stocks, finance, notifications, messagerie…), orchestrés par un API Gateway. Chaque service possède sa propre base PostgreSQL via Prisma ORM, et communique par événements Redis Pub/Sub. Le frontend comprend trois portails distincts — administration, agents terrain et clients — tous développés en Next.js avec Tailwind CSS. Chaque portail est entièrement responsive mobile et intégré en PWA (Progressive Web App), permettant aux agents terrain et aux clients d'accéder à la plateforme directement depuis leur smartphone comme une application native. L'ensemble est conteneurisé avec Docker et déployé sur un serveur OVH avec Nginx, SSL Let's Encrypt et monitoring complet.`,
+La plateforme intègre un portail livreur dédié à la logistique du linge : transferts entre un entrepôt principal et des entrepôts secondaires, et organisation de tournées quotidiennes pour déposer le linge propre dans les logements. L'optimisation des itinéraires permet de minimiser les temps de trajet et d'assurer une couverture efficace de l'ensemble du parc immobilier.
+
+L'architecture repose sur plus de 14 microservices NestJS (authentification, CRM, calendrier, interventions, stocks, finance, notifications, messagerie, livraison…), orchestrés par un API Gateway. Chaque service possède sa propre base PostgreSQL via Prisma ORM, et communique par événements Redis Pub/Sub. Le frontend comprend quatre portails distincts — administration, agents terrain, livreurs et clients — tous développés en Next.js avec Tailwind CSS. Chaque portail est entièrement responsive mobile et intégré en PWA (Progressive Web App), permettant aux agents terrain, livreurs et clients d'accéder à la plateforme directement depuis leur smartphone comme une application native. L'ensemble est conteneurisé avec Docker et déployé sur un serveur OVH avec Nginx, SSL Let's Encrypt et monitoring complet.`,
     tags: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker"],
     images: [`${basePath}/projects/properis.svg`],
     github: "#",
@@ -165,6 +168,17 @@ L'intégration avec Google Site Kit permet de remonter les données réelles de 
     details: null,
     tags: ["Python", "TensorFlow", "Keras", "Deep Learning"],
     images: [`${basePath}/projects/mnist.svg`],
+    github: "#",
+    live: null,
+    featured: false,
+  },
+  {
+    title: "Détection de Fake News — NLP",
+    description:
+      "Classification de vraies et fausses informations par machine learning : arbres de décision et SVM avec prétraitement Pandas.",
+    details: null,
+    tags: ["Python", "Scikit-learn", "Pandas", "NLP"],
+    images: [`${basePath}/projects/nlp.svg`],
     github: "#",
     live: null,
     featured: false,
