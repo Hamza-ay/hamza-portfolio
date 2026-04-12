@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Hamza",
   lastName: "AIT YAHIATENE",
-  title: "Data Scientist & Développeur Full-Stack",
+  title: "Data Scientist & Développeur Logiciel",
   email: "aityahiatenehamza0@gmail.com",
   phone: "07 48 41 41 22",
   location: "Lille, France",
