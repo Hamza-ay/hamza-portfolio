@@ -33,7 +33,7 @@ export const skills = {
     { name: "React", icon: "SiReact", color: "#61DAFB" },
     { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
     { name: "HTML5", icon: "SiHtml5", color: "#E34F26" },
-    { name: "CSS3", icon: "SiCss3", color: "#1572B6" },
+    { name: "CSS3", icon: "SiCss", color: "#1572B6" },
   ],
   backend: [
     { name: "NestJS", icon: "SiNestjs", color: "#E0234E" },

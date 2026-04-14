@@ -5,7 +5,7 @@ import { useRef } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { skills } from "@/data/portfolio";
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss3,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
   SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
@@ -14,7 +14,7 @@ import {
 import { FiCpu } from "react-icons/fi";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss3,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
   SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
