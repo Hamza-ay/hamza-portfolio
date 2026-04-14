@@ -28,28 +28,18 @@ export const skills = {
   data: [
     { name: "Python", icon: "SiPython", color: "#3776AB" },
     { name: "TensorFlow", icon: "SiTensorflow", color: "#FF6F00" },
-    { name: "Pandas", icon: "SiPandas", color: "#150458" },
-    { name: "Scikit-learn", icon: "SiScikitlearn", color: "#F7931E" },
-    { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
-    { name: "NumPy", icon: "SiNumpy", color: "#013243" },
   ],
   frontend: [
     { name: "React", icon: "SiReact", color: "#61DAFB" },
     { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
-    { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
-    { name: "Tailwind CSS", icon: "SiTailwindcss", color: "#06B6D4" },
   ],
   backend: [
     { name: "NestJS", icon: "SiNestjs", color: "#E0234E" },
-    { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
-    { name: "PHP", icon: "SiPhp", color: "#777BB4" },
-    { name: "Docker", icon: "SiDocker", color: "#2496ED" },
+    { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
   ],
   tools: [
     { name: "Git", icon: "SiGit", color: "#F05032" },
-    { name: "Linux", icon: "SiLinux", color: "#FCC624" },
     { name: "Claude Code", icon: "SiAnthropic", color: "#D4A574" },
-    { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
   ],
 };
 
