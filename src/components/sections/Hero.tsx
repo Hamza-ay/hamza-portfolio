@@ -74,8 +74,8 @@ export default function Hero() {
             GitHub
           </a>
           <a
-            href={`${basePath}/cv-hamza.docx`}
-            download="CV_Hamza_AIT_YAHIATENE.docx"
+            href={`${basePath}/cv-hamza.pdf`}
+            download="CV-Hamza-AIT-YAHIATENE-DevOps.pdf"
             className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-md border border-ink-line text-mist-300 font-medium text-sm hover:border-accent2-500/60 hover:text-mist-100 transition-colors duration-200"
           >
             <FiDownload size={17} />
