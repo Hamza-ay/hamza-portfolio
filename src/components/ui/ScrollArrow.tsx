@@ -29,7 +29,7 @@ export default function ScrollArrow() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollDown}
-          className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-amber-600/80 backdrop-blur-sm border border-amber-500/30 flex items-center justify-center text-white shadow-lg shadow-amber-600/30 hover:bg-amber-500 hover:scale-110 transition-all duration-300"
+          className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-accent-600/80 backdrop-blur-sm border border-accent-500/30 flex items-center justify-center text-white shadow-lg shadow-accent-600/30 hover:bg-accent-500 hover:scale-110 transition-all duration-300"
           aria-label="Descendre"
         >
           <FiArrowDown size={20} />

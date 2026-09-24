@@ -2,35 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: #0b1020;
+  --ink-raised: #121a30;
+  --ink-line: #22304f;
+  --accent: #ff4d8d;
+  --accent-2: #6c8cff;
+  --ok: #2fd49a;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
-  background: transparent;
-  color: #fafaf9;
+  background: var(--ink);
+  color: #e8ecf5;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
 }
 
-/* Scrollbar */
+/* Le chiffre est une donnée : jamais de ligature ni de chasse variable. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Filet lumineux : sert à marquer la surface active, pas à décorer. */
+.hairline-top {
+  position: relative;
+}
+.hairline-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent) 22%,
+    var(--accent-2) 68%,
+    transparent
+  );
+  opacity: 0.55;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f0f0f;
+  background: var(--ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: #92400e;
+  background: #3a4763;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d97706;
+  background: var(--accent);
 }
 
 ::selection {
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(255, 77, 141, 0.28);
   color: #fff;
+}
+
+/* Accessibilité : focus clavier visible partout. */
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

@@ -43,16 +43,16 @@ const itemVariants = {
 };
 
 const categories = [
-  { key: "data" as const, label: "Data Science & IA" },
-  { key: "frontend" as const, label: "Front-End" },
+  { key: "tools" as const, label: "DevOps & Infrastructure" },
   { key: "backend" as const, label: "Back-End" },
-  { key: "tools" as const, label: "Outils & DevOps" },
+  { key: "frontend" as const, label: "Front-End" },
+  { key: "data" as const, label: "Data Science & IA" },
 ];
 
 export default function TechStack() {
   return (
     <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 relative">
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-orange-600/8 rounded-full blur-[120px] -z-10" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-accent2-600/8 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-6xl mx-auto">
         <SectionHeading
@@ -82,9 +82,7 @@ function CategoryGrid({
 
   return (
     <div>
-      <h3 className="text-sm font-semibold text-stone-400 uppercase tracking-widest mb-4 ml-1">
-        {label}
-      </h3>
+      <h3 className="font-mono text-xs text-mist-500 mb-4 ml-1">{label}</h3>
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -99,7 +97,7 @@ function CategoryGrid({
               key={skill.name}
               variants={itemVariants}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-amber-500/40 hover:bg-white/[0.06] transition-colors duration-300"
+              className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-accent-500/40 hover:bg-white/[0.06] transition-colors duration-300"
             >
               {Icon && (
                 <Icon
@@ -107,7 +105,7 @@ function CategoryGrid({
                   color={skill.color}
                 />
               )}
-              <span className="text-xs text-stone-400 group-hover:text-stone-200 transition-colors text-center">
+              <span className="text-xs text-mist-400 group-hover:text-mist-200 transition-colors text-center">
                 {skill.name}
               </span>
             </motion.div>

@@ -7,20 +7,20 @@ export const personalInfo = {
   location: "Lille, France",
   github: "https://github.com/Hamza-ay",
   linkedin: "https://www.linkedin.com/in/hamza-ait-yahiatene-7a795328a",
-  bio: "Passionné par la data science et le développement d'applications intelligentes, je transforme des données brutes en insights stratégiques et en produits concrets. Mon Master en Traitement du Signal et des Images, combiné à une base solide en mathématiques appliquées, me permet de concevoir des pipelines de machine learning, des dashboards analytiques temps réel et des applications full-stack pilotées par la donnée.",
-  aboutDescription: `Je m'appelle Hamza Ait Yahiatene, j'ai 25 ans et je suis fraîchement diplômé d'un Master en Traitement du Signal et des Images à l'Université du Littoral Côte d'Opale (Calais). Depuis mes études en mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou en Algérie, j'ai toujours été fasciné par l'extraction de sens à partir des données. C'est cette curiosité qui m'a naturellement conduit vers la data science et le développement d'applications intelligentes.
+  bio: "Ingénieur DevOps, je construis et fiabilise la chaîne qui mène du code à la production : intégration continue, déploiement automatisé, conteneurisation et supervision. Mon objectif est simple — qu'une mise en production devienne un non-événement, reproductible et sans intervention manuelle.",
+  aboutDescription: `Je m'appelle Hamza Ait Yahiatene, j'ai 25 ans et je suis ingénieur DevOps à Lille. Diplômé d'un Master en Traitement du Signal et des Images à l'Université du Littoral Côte d'Opale, après des études de mathématiques à l'Université Mouloud Mammeri de Tizi Ouzou, j'ai découvert en mettant mes propres projets en production que le vrai défi n'était pas d'écrire le code, mais de le livrer de façon fiable et répétable. C'est là que mon métier a pris forme.
 
-Mon parcours académique m'a permis de construire une base solide en mathématiques appliquées — optimisation, statistiques, algèbre linéaire — que je combine avec une expertise pratique en machine learning (Scikit-learn, TensorFlow), analyse de données (Pandas, SQL) et visualisation. Ce double profil data + développement me permet de couvrir l'ensemble de la chaîne : de l'exploration des données à la mise en production de modèles et dashboards.
+Mon travail consiste à automatiser tout ce qui peut l'être entre un commit et un utilisateur : chaînes d'intégration et de déploiement continus avec Jenkins, conteneurisation Docker, administration de serveurs Linux, Apache et Tomcat, configuration Nginx, gestion des bases PostgreSQL et supervision des services en fonctionnement.
 
-Ce qui me motive, c'est de transformer des données en décisions. Qu'il s'agisse de concevoir un pipeline de traitement d'images par IA, de construire des tableaux de bord analytiques temps réel pour la gestion immobilière, ou d'entraîner des modèles de classification — chaque projet a été une occasion de repousser mes limites.
+Cette approche, je l'ai mise en pratique sur des plateformes réellement en production : architectures en microservices conteneurisées, déploiements orchestrés sur serveurs dédiés, pipelines de build automatisés et supervision continue. Chaque incident évité en amont vaut mieux qu'un correctif en urgence.
 
-Je suis convaincu que les meilleurs data scientists sont ceux qui savent aussi mettre en production. Mon expertise full-stack (React, NestJS, PostgreSQL) me donne une perspective unique pour intégrer l'intelligence artificielle directement dans des applications web performantes.`,
+Ma formation en mathématiques appliquées reste un atout au quotidien : elle m'a appris à mesurer avant de décider. On n'améliore que ce que l'on sait observer — c'est vrai d'un modèle statistique comme d'une infrastructure.`,
   availability: "Disponible immédiatement",
   typingWords: [
-    "des modèles prédictifs",
-    "des dashboards analytiques",
-    "des pipelines de données",
-    "des applications IA",
+    "des pipelines CI/CD",
+    "des déploiements automatisés",
+    "des infrastructures fiables",
+    "des environnements conteneurisés",
   ],
 };
 
@@ -148,17 +148,17 @@ L'application intègre un système de crédits avec paiement via Stripe et PayPa
     featured: true,
   },
   {
-    title: "Properis — Plateforme de Gestion Data-Driven",
+    title: "Properis — Architecture Microservices Conteneurisée",
     description:
-      "Application full-stack pilotée par la donnée pour conciergerie Airbnb : dashboards analytiques, visualisation temps réel, optimisation ML des tournées, gestion de stocks FIFO.",
-    details: `Properis est une plateforme complète de gestion conçue pour une conciergerie Airbnb, avec un fort accent sur l'analyse de données et la prise de décision data-driven. Elle couvre l'ensemble du cycle opérationnel avec des dashboards analytiques temps réel : suivi du chiffre d'affaires (HT/TTC), visualisation des interventions par propriété, métriques d'activité des agents, et valorisation des stocks de linge selon la méthode FIFO.
+      "Plateforme de gestion pour conciergerie Airbnb : une vingtaine de microservices conteneurisés, quatre portails, déploiement automatisé et supervision continue en production.",
+    details: `Properis est une plateforme complète de gestion pour une conciergerie Airbnb, déployée en production et utilisée au quotidien. L'enjeu technique principal n'était pas le développement des fonctionnalités, mais la mise en place d'une architecture capable de tenir en production sans intervention manuelle.
 
-Le volet data science inclut un service de machine learning pour l'optimisation des tournées de livraison de linge via l'algorithme VROOM (Vehicle Routing), la prédiction des besoins en stocks par propriété, et l'analyse des patterns de réservation à partir des données iCal Airbnb/Booking. Les visualisations interactives (Recharts) permettent d'explorer les données à travers des graphiques de tendances, des tableaux croisés et des indicateurs clés de performance.
+L'infrastructure repose sur une vingtaine de microservices orchestrés par un API Gateway, communiquant par événements Redis Pub/Sub, le tout entièrement conteneurisé avec Docker. Le déploiement est automatisé de bout en bout : chaîne d'intégration continue déclenchée à chaque push, build des images, publication au registre, puis mise à jour des conteneurs sur le serveur. Nginx assure la terminaison TLS, le routage des quatre domaines et les en-têtes de sécurité. La supervision couvre les sondes de santé de chaque service, la remontée d'erreurs et la rotation des journaux.
 
-La plateforme intègre un portail livreur dédié à la logistique du linge : transferts entre un entrepôt principal et des entrepôts secondaires, et organisation de tournées quotidiennes optimisées pour déposer le linge propre dans les logements.
+Le volet sécurité a fait l'objet d'un travail dédié : durcissement SSH, pare-feu, détection d'intrusion, secrets distincts par service et rotation des clés, conteneurs exécutés sans privilèges root, limites de ressources par service et sauvegardes automatisées de la base.
 
-L'architecture repose sur plus de 14 microservices NestJS orchestrés par un API Gateway, chacun avec sa propre base PostgreSQL via Prisma ORM et communication par événements Redis Pub/Sub. Le frontend comprend quatre portails distincts — administration, agents terrain, livreurs et clients — tous développés en Next.js avec Tailwind CSS, responsive mobile et intégrés en PWA. L'ensemble est conteneurisé avec Docker et déployé sur OVH avec Nginx et monitoring complet.`,
-    tags: ["PostgreSQL", "Python", "Data Viz", "NestJS", "React", "Docker"],
+Côté fonctionnel, la plateforme couvre l'ensemble du cycle opérationnel à travers quatre portails distincts — administration, agents terrain, livreurs et clients — avec synchronisation horaire des plateformes de réservation, optimisation automatique des tournées de livraison, contrôle qualité des photos par comparaison d'images et facturation mensuelle générée automatiquement.`,
+    tags: ["Docker", "CI/CD", "Nginx", "PostgreSQL", "NestJS", "Redis"],
     images: [`${basePath}/projects/properis.svg`],
     github: "#",
     live: "#",

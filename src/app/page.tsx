@@ -7,7 +7,6 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import Background from "@/components/ui/Background";
-import MatrixRain from "@/components/ui/MatrixRain";
 import SectionDivider from "@/components/ui/SectionDivider";
 import ScrollArrow from "@/components/ui/ScrollArrow";
 
@@ -15,23 +14,22 @@ export default function Home() {
   return (
     <>
       <Background />
-      <MatrixRain />
       <main className="relative" style={{ zIndex: 10 }}>
-      <ScrollArrow />
+        <ScrollArrow />
 
-      <Navbar />
-      <Hero />
-      <SectionDivider color="amber" />
-      <About />
-      <SectionDivider color="orange" />
-      <Projects />
-      <SectionDivider color="amber" />
-      <TechStack />
-      <SectionDivider color="yellow" />
-      <Experience />
-      <SectionDivider color="orange" />
-      <Contact />
-      <Footer />
+        <Navbar />
+        <Hero />
+        <SectionDivider />
+        <About />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <TechStack />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Contact />
+        <Footer />
       </main>
     </>
   );

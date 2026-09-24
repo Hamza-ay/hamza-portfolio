@@ -1,85 +1,97 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TypewriterEffect from "@/components/ui/TypewriterEffect";
+import DeployPipeline from "@/components/sections/DeployPipeline";
 import { personalInfo } from "@/data/portfolio";
 import { FiGithub, FiMail, FiDownload } from "react-icons/fi";
 
+const basePath = process.env.NODE_ENV === "production" ? "/hamza-portfolio" : "";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6">
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 px-5 sm:px-8">
+      <div className="relative z-10 w-full max-w-5xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 backdrop-blur-sm"
-          >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-amber-200 text-xs sm:text-sm font-medium">{personalInfo.availability}</span>
-          </motion.div>
+          {/* Identité : le nom d'abord, le rôle ensuite, sans détour. */}
+          <p className="font-mono text-xs sm:text-sm text-accent-400">
+            {personalInfo.name} {personalInfo.lastName} · {personalInfo.location}
+          </p>
 
-          {/* Name */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-[1.1] tracking-tight">
-            <span className="text-white">Salut, je suis</span>
+          <h1 className="mt-5 text-[2.6rem] leading-[1.02] sm:text-6xl md:text-7xl font-semibold tracking-tightest text-mist-100 max-w-3xl">
+            Une mise en production
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 drop-shadow-[0_0_30px_rgba(245,158,11,0.3)]">
-              {personalInfo.name}
+            devrait être
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent2-400">
+              un non-événement.
             </span>
           </h1>
 
-          {/* Typewriter */}
-          <div className="mt-4 sm:mt-8 text-base sm:text-xl md:text-3xl text-stone-300 font-light">
-            <span>{personalInfo.title}</span>
-            <br />
-            <span>Je crée </span>
-            <TypewriterEffect words={personalInfo.typingWords} />
-          </div>
-
-          {/* Bio */}
-          <p className="mt-5 sm:mt-8 text-stone-500 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base md:text-lg px-2">
-            {personalInfo.bio}
+          <p className="mt-7 text-base sm:text-lg text-mist-400 max-w-[54ch] leading-relaxed">
+            {personalInfo.title} à Lille. Je construis les chaînes qui mènent du
+            code à la production — intégration continue, conteneurisation,
+            déploiement automatisé, supervision.
           </p>
         </motion.div>
 
-        {/* CTA Buttons */}
+        {/* Le pipeline de ce site même : la démonstration avant l'argument. */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-8 sm:mt-12"
+          transition={{ delay: 0.22, duration: 0.7, ease: "easeOut" }}
+          className="mt-11 max-w-3xl"
+        >
+          <p className="font-mono text-[11px] text-mist-500 mb-3">
+            la page que vous lisez est publiée par ce pipeline
+          </p>
+          <DeployPipeline />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row sm:items-center gap-3 mt-10"
         >
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold text-sm sm:text-base shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-md bg-accent-500 text-[#2A0616] font-semibold text-sm hover:bg-accent-400 transition-colors duration-200"
           >
-            <FiMail size={18} />
+            <FiMail size={17} />
             Me contacter
           </a>
           <a
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full border-2 border-stone-700 text-stone-300 font-medium text-sm sm:text-base hover:border-amber-500 hover:text-white hover:bg-amber-500/10 transition-all duration-300 backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-md border border-ink-line text-mist-300 font-medium text-sm hover:border-accent-500/60 hover:text-mist-100 transition-colors duration-200"
           >
-            <FiGithub size={18} />
+            <FiGithub size={17} />
             GitHub
           </a>
           <a
-            href={`${process.env.NODE_ENV === "production" ? "/hamza-portfolio" : ""}/cv-hamza.docx`}
+            href={`${basePath}/cv-hamza.docx`}
             download="CV_Hamza_AIT_YAHIATENE.docx"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full border-2 border-stone-700 text-stone-300 font-medium text-sm sm:text-base hover:border-orange-500 hover:text-white hover:bg-orange-500/10 transition-all duration-300 backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-md border border-ink-line text-mist-300 font-medium text-sm hover:border-accent2-500/60 hover:text-mist-100 transition-colors duration-200"
           >
-            <FiDownload size={18} />
-            Télécharger CV
+            <FiDownload size={17} />
+            Télécharger le CV
           </a>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-8 flex items-center gap-2.5 font-mono text-xs text-mist-500"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-ok" />
+          {personalInfo.availability}
+        </motion.p>
       </div>
     </section>
   );

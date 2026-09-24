@@ -3,7 +3,13 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function SectionDivider({ color = "amber" }: { color?: "amber" | "orange" | "yellow" | "cyan" }) {
+/**
+ * Séparateur : un filet qui se tend puis se relâche au passage. Une seule
+ * variante — la précédente exposait un prop `color` dont les classes
+ * (`bg-${color}-400`) étaient construites dynamiquement et n'étaient donc
+ * jamais générées par Tailwind : le point central ne s'affichait pas.
+ */
+export default function SectionDivider() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -13,29 +19,19 @@ export default function SectionDivider({ color = "amber" }: { color?: "amber" | 
   const width = useTransform(scrollYProgress, [0, 0.5, 1], ["0%", "100%", "0%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
-  const colors = {
-    amber: "from-transparent via-amber-500/50 to-transparent",
-    orange: "from-transparent via-orange-500/50 to-transparent",
-    yellow: "from-transparent via-yellow-500/40 to-transparent",
-    cyan: "from-transparent via-cyan-500/40 to-transparent",
-  };
-
-  const glowColors = {
-    amber: "shadow-amber-500/20",
-    orange: "shadow-orange-500/20",
-    yellow: "shadow-yellow-500/20",
-    cyan: "shadow-cyan-500/20",
-  };
-
   return (
-    <div ref={ref} className="relative h-24 flex items-center justify-center overflow-hidden">
+    <div
+      ref={ref}
+      aria-hidden
+      className="relative h-20 flex items-center justify-center overflow-hidden"
+    >
       <motion.div
         style={{ width, opacity }}
-        className={`h-px bg-gradient-to-r ${colors[color]} shadow-lg ${glowColors[color]}`}
+        className="h-px bg-gradient-to-r from-transparent via-accent-500/45 to-transparent"
       />
       <motion.div
         style={{ opacity }}
-        className={`absolute w-2 h-2 rounded-full bg-${color}-400 shadow-lg shadow-${color}-400/50`}
+        className="absolute w-1.5 h-1.5 rounded-full bg-accent-400 shadow-[0_0_12px_rgba(255,77,141,0.7)]"
       />
     </div>
   );
