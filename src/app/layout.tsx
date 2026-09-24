@@ -24,18 +24,21 @@ const siteUrl = "https://hamza-ay.github.io/hamza-portfolio";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Hamza AIT YAHIATENE | Développeur Full-Stack",
+  title: "Hamza AIT YAHIATENE | Ingénieur DevOps",
   description:
-    "Portfolio de Hamza AIT YAHIATENE — Développeur Full-Stack passionné par le développement web et les sciences des données. React, Next.js, Node.js, TypeScript, Python, NestJS. Disponible immédiatement à Lille, France.",
+    "Portfolio de Hamza AIT YAHIATENE — Ingénieur DevOps : intégration continue, déploiement automatisé et infrastructure. Jenkins, Docker, Linux, Apache, Tomcat, PostgreSQL. Disponible immédiatement à Lille, France.",
   keywords: [
     "Hamza AIT YAHIATENE",
-    "Développeur Full-Stack",
-    "Développeur Web",
-    "React",
+    "Ingénieur DevOps",
+    "DevOps",
+    "CI/CD",
+    "Jenkins",
+    "Docker",
+    "Linux",
+    "Apache",
+    "Tomcat",
     "Next.js",
-    "Node.js",
     "TypeScript",
-    "NestJS",
     "Python",
     "Portfolio",
     "Lille",
@@ -49,9 +52,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Hamza AIT YAHIATENE | Développeur Full-Stack",
+    title: "Hamza AIT YAHIATENE | Ingénieur DevOps",
     description:
-      "Développeur Full-Stack passionné par le développement web et les sciences des données. React, Next.js, Node.js, TypeScript.",
+      "Ingénieur DevOps : intégration continue, déploiement automatisé et infrastructure. Jenkins, Docker, Linux, Apache, Tomcat.",
     url: siteUrl,
     siteName: "Portfolio Hamza AIT YAHIATENE",
     locale: "fr_FR",
@@ -59,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hamza AIT YAHIATENE | Développeur Full-Stack",
+    title: "Hamza AIT YAHIATENE | Ingénieur DevOps",
     description:
-      "Développeur Full-Stack passionné par le développement web et les sciences des données.",
+      "Ingénieur DevOps : intégration continue, déploiement automatisé et infrastructure.",
   },
   robots: {
     index: true,
@@ -77,7 +80,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Hamza AIT YAHIATENE",
-  jobTitle: "Développeur Full-Stack",
+  jobTitle: "Ingénieur DevOps",
   url: siteUrl,
   sameAs: [
     "https://github.com/Hamza-ay",

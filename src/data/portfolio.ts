@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Hamza",
   lastName: "AIT YAHIATENE",
-  title: "Data Scientist & Développeur Logiciel",
+  title: "Ingénieur DevOps",
   email: "aityahiatenehamza0@gmail.com",
   phone: "07 48 41 41 22",
   location: "Lille, France",
@@ -42,10 +42,29 @@ export const skills = {
   tools: [
     { name: "Git", icon: "SiGit", color: "#F05032" },
     { name: "Claude Code", icon: "SiAnthropic", color: "#D4A574" },
+    { name: "Jenkins", icon: "SiJenkins", color: "#D24939" },
+    { name: "Tomcat", icon: "SiApachetomcat", color: "#F8DC75" },
+    { name: "Apache", icon: "SiApache", color: "#D22128" },
+    { name: "Linux", icon: "SiLinux", color: "#FCC624" },
   ],
 };
 
 export const experiences = [
+  {
+    period: "Depuis sept. 2026",
+    title: "Gérant — Entrepreneur individuel",
+    company: "AHXIA",
+    location: "Lille",
+    description: "Entreprise individuelle — développement & automatisation",
+    tasks: [
+      "Création et direction de l'entreprise depuis le 4 septembre 2026",
+      "Mise en place de chaînes d'intégration et de déploiement continus (Jenkins)",
+      "Administration de serveurs Linux, Apache et Tomcat, conteneurisation Docker",
+      "Automatisation de processus métier et intégration de services tiers",
+      "Accompagnement technique de bout en bout : cadrage, développement, mise en production et suivi",
+    ],
+    tags: ["Entrepreneuriat", "DevOps", "CI/CD", "Linux", "Automatisation"],
+  },
   {
     period: "Fév. 2026 — Avr. 2026",
     title: "Stagiaire Développeur Web & Automatisations",
@@ -154,6 +173,23 @@ L'architecture repose sur plus de 14 microservices NestJS orchestrés par un API
 L'intégration avec Google Site Kit permet de remonter les données réelles de Search Console et Analytics directement dans le tableau de bord du plugin, offrant ainsi un suivi concret des résultats. Un portail client dédié présente les statistiques et les recommandations personnalisées. L'interface du portail est responsive mobile et intégrée en PWA, permettant aux clients de suivre leur progression SEO depuis leur téléphone. Le plugin inclut également un système d'auto-update depuis un dépôt GitHub privé, permettant de distribuer les mises à jour sans passer par le répertoire officiel WordPress.`,
     tags: ["PHP", "WordPress", "SEO", "JavaScript", "Composer"],
     images: [`${basePath}/projects/nexyweb.svg`],
+    github: "#",
+    live: null,
+    featured: true,
+  },
+  {
+    title: "Ma Bulle Bien-Être — Plateforme LMS",
+    description:
+      "Plateforme de formation en ligne dédiée au bien-être : yoga, sophrologie, hypnose et gestion du stress. Deux interfaces séparées, recommandation personnalisée et relances automatiques.",
+    details: `Ma Bulle Bien-Être est une plateforme de formation en ligne sur mesure, conçue pour une praticienne du bien-être souhaitant diffuser ses programmes de yoga, sophrologie, hypnose et gestion du stress. L'enjeu était de proposer un parcours guidé et progressif, là où la plupart des solutions du marché se contentent d'une bibliothèque de vidéos.
+
+Le système de recommandation oriente chaque visiteur vers le programme adapté à son besoin, à partir d'un choix par ressenti ou par problématique. Un programme de sept jours offert sert de porte d'entrée et permet de découvrir la méthode avant tout achat. L'offre combine ensuite achats à l'unité, packs thématiques et abonnements.
+
+L'architecture repose sur deux interfaces distinctes : un espace apprenant et un back-office d'administration en marque blanche, qui partagent le même socle de données et le même code métier via un monorepo. Le lecteur vidéo est entièrement personnalisé et anonymisé, de façon à diffuser les contenus sans exposer leur source ni les rendre accessibles hors plateforme.
+
+Côté engagement, une relance par email se déclenche automatiquement quatre jours après l'abandon d'un programme, avec une protection contre les envois répétés. L'authentification a fait l'objet d'un soin particulier : réinitialisation de mot de passe sécurisée sur les deux portails, limitation du nombre de tentatives, jetons hachés et réponses identiques que le compte existe ou non. Interface responsive avec thème clair et sombre mémorisé.`,
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js", "Tailwind"],
+    images: [`${basePath}/projects/mabulle.svg`],
     github: "#",
     live: null,
     featured: true,

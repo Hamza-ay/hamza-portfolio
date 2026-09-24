@@ -8,6 +8,7 @@ import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
+  SiJenkins, SiApachetomcat, SiApache,
   SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
   SiNodedotjs,
 } from "react-icons/si";
@@ -17,6 +18,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; color?: strin
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
   SiNestjs, SiPostgresql, SiPython, SiPhp,
   SiGit, SiDocker, SiLinux, SiWordpress,
+  SiJenkins, SiApachetomcat, SiApache,
   SiTensorflow, SiPandas, SiScikitlearn, SiNumpy,
   SiNodedotjs,
   SiAnthropic: FiCpu,
