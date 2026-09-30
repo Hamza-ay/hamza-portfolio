@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import DeployPipeline from "@/components/sections/DeployPipeline";
 import { personalInfo } from "@/data/portfolio";
 import { FiGithub, FiMail, FiDownload } from "react-icons/fi";
 
@@ -38,23 +37,10 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Le pipeline de ce site même : la démonstration avant l'argument. */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.22, duration: 0.7, ease: "easeOut" }}
-          className="mt-11 max-w-3xl"
-        >
-          <p className="font-mono text-[11px] text-mist-500 mb-3">
-            la page que vous lisez est publiée par ce pipeline
-          </p>
-          <DeployPipeline />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 0.25, duration: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row sm:items-center gap-3 mt-10"
         >
           <a
@@ -86,7 +72,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
+          transition={{ delay: 0.45, duration: 0.6 }}
           className="mt-8 flex items-center gap-2.5 font-mono text-xs text-mist-500"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-ok" />
